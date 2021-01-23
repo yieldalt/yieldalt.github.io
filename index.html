@@ -30,6 +30,8 @@
 
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"> -->
   <!-- <link rel="stylesheet" href="dist/jquery-ui-slider-pips.css"> -->
+  <link rel="stylesheet" href="bootstrap-custom/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-custom/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="dist/styles.css">
 
   <script
@@ -41,11 +43,13 @@
   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
   crossorigin="anonymous"></script> -->
 
+  <script src="bootstrap-custom/js/bootstrap.min.js"></script>
+
 </head>
 <body>
   <main>
     <header>
-      <h1><img src="img/yield-logo.svg" alt="Yield logo"><span>YLD</span> Supply Calculator</h1>
+      <h1><img src="img/yield-logo.svg" alt="Yield logo"><span>YLD</span> Supply Calculator <a href="#" data-toggle="modal" data-target="#explainer"><span class="fa fa-question-circle"></span></a></h1>
     </header>
     <section>
       <div class="master-grid">
@@ -180,6 +184,24 @@
       </div>
     </section>
   </main>
+  <div class="modal fade" id="explainer" tabindex="-1" role="dialog" aria-labelledby="explainerLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="explainerLabel">What am I looking at?</h4>
+        </div>
+        <div class="modal-body">
+          <p>As you probably know by now, the YLD token has a dynamic supply. Tokens are minted upon timely repayment of a loan and 100% of fees collected are used to buy back tokens from the open market and burn them.</p>
+          <p><q>An economist is an expert who will tell you tomorrow why the things he predicted yesterday didn’t happen today.</q><br> – Laurence J. Peter</p>
+          <p>There are many variables within the Yield loan marketplace, such as interest rates, whether rewards are claimed early or not at all, and the price of YLD, to name a few. This calculator tool, and subsequent tools and visualizations to be added to the dashboard, is aimed at helping people understand how each factor can affect the supply of YLD. It should be noted that this tool is purely for educational purposes as there is no way to truly know how each and every market participant will act. However, hopefully it succeeds in removing some of the guessing games around how each factor could affect the outcome.</p>
+          <p>The calculator inputs represent a 30-day period of loans on the Yield platform and are subsequently extrapolated into a 12-month period on the chart below. The default settings are not based on any real figures since the app has yet to launch on mainnet, but they are meant to represent what we have deemed one possible, real-world scenario. Most of the variables should be pretty self-explanatory. Those with a question mark next to their label will reveal a short explanation where necessary.</p>
+          <p>Part of the responsibility is on you to use common sense and discern whether or not your inputs represent a realistic scenario. Some combinations will produce highly unlikely or flat-out impossible results. For example, if you have the price of YLD at $25, but the gross loan value for that period comes out to $500M then you may want to readjust because that would result in a negative YLD supply within a few months time. Common sense would dictate that such a high gross loan value would justify a much higher YLD price.</p>
+          <p>As was mentioned, this is the first tool to become available on the dashboard. As time goes on, we will likely implement more tools that we think may offer useful data, projections, and comparisons.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <script src="js/jquery.formatNumber-0.1.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
