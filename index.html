@@ -36,6 +36,10 @@
   src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
+  <!-- <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script> -->
 
 </head>
 <body>
@@ -54,7 +58,6 @@
               <label for="totalLoans">Total Number of Loans <span>(30-day period)</span></label>
               <div class="input-group">
                 <input type="number" name="totalLoans" id="totalLoans" min="100" value="1000" max="20000" step="100">
-                <!-- <div id="flat-slider"></div> -->
                 <input class="inputRange" type="range" step="100" min="100" max="20000" value="1000"/>
               </div>
             </div>
@@ -88,6 +91,23 @@
               <div class="input-group">
                 <input type="number" name="defaultPct" id="defaultPct" min="0" max="25" value="7.5" step="0.1">
                 <input class="inputRange" type="range" step="0.1" min="0" max="25" value="7.5"/>
+              </div>
+            </div>
+
+            <div class="input-group-parent">
+              <label for="unclaimedRwd">Unclaimed Rewards <span>(%)</span></label>
+              <div class="input-group">
+                <input type="number" name="unclaimedRwd" id="unclaimedRwd" min="0" max="50" value="10" step="1">
+                <input class="inputRange" type="range" step="1" min="0" max="50" value="10"/>
+              </div>
+            </div>
+
+            <div class="input-group-parent con-tooltip top">
+              <label for="claimedEarlyRwd">Rewards Claimed Early <span>(%)</span> <span class="fa fa-question-circle"></span></label>
+              <span class="tooltip">Assuming an average of 35% of total rewards claimed</span>
+              <div class="input-group">
+                <input type="number" name="claimedEarlyRwd" id="claimedEarlyRwd" min="0" max="100" value="25" step="1">
+                <input class="inputRange" type="range" step="1" min="0" max="100" value="25"/>
               </div>
             </div>
 
@@ -146,15 +166,15 @@
             </div>
             <div class="output con-tooltip top">
               <h3>Net Minted<span class="fa fa-question-circle"></span></h3>
-              <span class="tooltip">(Minted - Burned)</span>
+              <span class="tooltip">Minted - Burned</span>
               <p id="netMint" class=""></p>
             </div>
           </div>
         </div>
         <div class="chart-wrapper">
+          <a href="#" class="switch-chart bar"><span class="fa fa-refresh"></span> Switch Chart Type</a>
           <div class="inside">
-            <a href="#" class="switch-chart bar"><span class="fa fa-refresh"></span> Switch Chart Type</a>
-            <canvas id="supply" width="100%" height="280"></canvas>
+            <canvas id="supply" width="100%" height="250"></canvas>
           </div>
         </div>
       </div>
