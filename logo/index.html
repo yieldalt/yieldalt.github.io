@@ -16,14 +16,22 @@
       background: #222;
     }
     .logo {
-      max-width: 200px;
+      position: relative;
+      width: 355px;
+      padding-top: 355px;
       margin: 4em auto;
+    }
+    svg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
     }
     .path {
       stroke-dasharray: 223;
       opacity: 1;
-      -webkit-animation: dash 1s ease-out;
-              animation: dash 1s ease-out;
+      -webkit-animation: dash .75s ease-out;
+              animation: dash .75s ease-out;
       -webkit-animation-iteration-count: 1;
               animation-iteration-count: 1;
       animation-direction: reverse;
@@ -39,9 +47,9 @@
         stroke-dashoffset: 223;
         opacity: 0;
       }
-    }
+    }B
 
-  .sp {
+  /* .sp {
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -54,7 +62,7 @@
             justify-content: center;
     width: 100%;
     height: 500px;
-  }
+  } */
 
   /* Make the gradient visible only on hover*/
   linearGradient {
@@ -63,13 +71,12 @@
   path {
     stroke:#eebc83;
   }
-  svg #linear-gradient {
+  svg linearGradient {
     display:initial;
   }
-  svg path {
+  #svg-text path {
     stroke:url(#linear-gradient);
   }
-
   svg:hover #linear-gradient2 {
     display:initial;
   }
@@ -87,43 +94,45 @@
       <path stroke="#eebc83" stroke-width="16px" stroke-linecap="round" stroke-linejoin="round" fill="none" class="path" d="M132.37 23.23 87.14 96.71 65.86 69.78 45.25 105.03 27.29 87.4 9 117.99"/>
     </svg> -->
 
-    <div class="preloader">
-      <span class="sp">
-          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 141.22 141.22" fill="none" id="svg-text">
-          <defs>
-            <linearGradient id="linear-gradient" x1="-100%" y1="100%" x2="800%" y2="0" >
-              <stop offset="0" stop-color="#eebc83">
-                 <animate attributeName="offset" values="0;1" dur="2s" repeatCount="2"  />
-              </stop>
-              <stop offset="0" stop-color="rgba(250, 228, 202, 1)">
-                 <animate attributeName="offset" values="0;1" dur="2s" repeatCount="2"  />
-              </stop>
-              <stop offset="0.05" stop-color="rgba(250, 228, 202, 1)">
-                  <animate attributeName="offset" values="0.05;1" dur="2s" repeatCount="2"  />
-              </stop>
-              <stop offset="0.05" stop-color="#eebc83">
-                  <animate attributeName="offset" values="0.05;1" dur="2s" repeatCount="2"  />
-              </stop>
-            </linearGradient>
-            <linearGradient id="linear-gradient2" x1="-100%" y1="100%" x2="800%" y2="0" >
-              <stop offset="0" stop-color="#eebc83">
-                 <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite"  />
-              </stop>
-              <stop offset="0" stop-color="rgba(250, 228, 202, 1)">
-                 <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite"  />
-              </stop>
-              <stop offset="0.05" stop-color="rgba(250, 228, 202, 1)">
-                  <animate attributeName="offset" values="0.05;1" dur="2s" repeatCount="indefinite"  />
-              </stop>
-              <stop offset="0.05" stop-color="#eebc83">
-                  <animate attributeName="offset" values="0.05;1" dur="2s" repeatCount="indefinite"  />
-              </stop>
-            </linearGradient>
-          </defs>
-          <path stroke="#eebc83" stroke-width="16px" stroke-linecap="round" stroke-linejoin="round" fill="none" class="path" d="M9,118l18.3-30.6l18,17.6l20.6-35.2l21.3,26.9l45.2-73.5"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="355" height="355" viewBox="0 0 259.82 259.78" fill="none" id="svg-circle">
+      <circle class="ring" stroke="#eebc83" stroke-width="5px" stroke-linecap="round" stroke-linejoin="round" fill="none" cx="130" cy="130" r="127"/>
+      <circle fill="#32373a" cx="129.91" cy="130" r="125"/>
+    </svg>
 
-          </svg>
-        </span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 141.22 141.22" fill="none" id="svg-text">
+        <defs>
+          <linearGradient id="linear-gradient" x1="-100%" y1="100%" x2="800%" y2="0" >
+            <stop offset="0" stop-color="#eebc83">
+               <animate attributeName="offset" values="0;1" dur="2s" repeatCount="2"  />
+            </stop>
+            <stop offset="0" stop-color="rgba(250, 228, 202, 1)">
+               <animate attributeName="offset" values="0;1" dur="2s" repeatCount="2"  />
+            </stop>
+            <stop offset="0.05" stop-color="rgba(250, 228, 202, 1)">
+                <animate attributeName="offset" values="0.05;1" dur="2s" repeatCount="2"  />
+            </stop>
+            <stop offset="0.05" stop-color="#eebc83">
+                <animate attributeName="offset" values="0.05;1" dur="2s" repeatCount="2"  />
+            </stop>
+          </linearGradient>
+          <linearGradient id="linear-gradient2" x1="-100%" y1="100%" x2="800%" y2="0" >
+            <stop offset="0" stop-color="#eebc83">
+               <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite"  />
+            </stop>
+            <stop offset="0" stop-color="rgba(250, 228, 202, 1)">
+               <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite"  />
+            </stop>
+            <stop offset="0.05" stop-color="rgba(250, 228, 202, 1)">
+                <animate attributeName="offset" values="0.05;1" dur="2s" repeatCount="indefinite"  />
+            </stop>
+            <stop offset="0.05" stop-color="#eebc83">
+                <animate attributeName="offset" values="0.05;1" dur="2s" repeatCount="indefinite"  />
+            </stop>
+          </linearGradient>
+        </defs>
+        <path stroke="#eebc83" stroke-width="16px" stroke-linecap="round" stroke-linejoin="round" fill="none" class="path" d="M9,118l18.3-30.6l18,17.6l20.6-35.2l21.3,26.9l45.2-73.5"/>
+      </svg>
+
     </div>
   </div>
 </body>
