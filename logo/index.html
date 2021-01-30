@@ -43,11 +43,18 @@ linearGradient {
 path {
   stroke:#eebc83;
 }
-svg linearGradient {
+svg #linear-gradient {
   display:initial;
 }
 svg path {
   stroke:url(#linear-gradient);
+}
+
+svg:hover #linear-gradient2 {
+  display:initial;
+}
+svg:hover path {
+  stroke:url(#linear-gradient2);
 }
 /**/
   </style>
@@ -76,6 +83,20 @@ svg path {
               </stop>
               <stop offset="0.05" stop-color="#eebc83">
                   <animate attributeName="offset" values="0.05;1" dur="3s" repeatCount="2"  />
+              </stop>
+            </linearGradient>
+            <linearGradient id="linear-gradient2" x1="-100%" y1="100%" x2="800%" y2="0" >
+              <stop offset="0" stop-color="#eebc83">
+                 <animate attributeName="offset" values="0;1" dur="3s" repeatCount="indefinite"  />
+              </stop>
+              <stop offset="0" stop-color="rgba(255, 214, 167, 1)">
+                 <animate attributeName="offset" values="0;1" dur="3s" repeatCount="indefinite"  />
+              </stop>
+              <stop offset="0.05" stop-color="rgba(255, 214, 167, 1)">
+                  <animate attributeName="offset" values="0.05;1" dur="3s" repeatCount="indefinite"  />
+              </stop>
+              <stop offset="0.05" stop-color="#eebc83">
+                  <animate attributeName="offset" values="0.05;1" dur="3s" repeatCount="indefinite"  />
               </stop>
             </linearGradient>
           </defs>
