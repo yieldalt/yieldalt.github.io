@@ -20,7 +20,8 @@
       margin: 4em auto;
     }
     .path {
-      stroke-dasharray: 500;
+      stroke-dasharray: 223;
+      opacity: 1;
       -webkit-animation: dash 1s ease-out;
               animation: dash 1s ease-out;
       -webkit-animation-iteration-count: 1;
@@ -29,17 +30,15 @@
     }
     @-webkit-keyframes dash {
       to {
-        stroke-dashoffset: -250;
+        stroke-dashoffset: 223;
+        opacity: 0;
       }
     }
     @keyframes dash {
       to {
-        stroke-dashoffset: -250;
+        stroke-dashoffset: 223;
+        opacity: 0;
       }
-    }
-    .clip-svg {
-      -webkit-clip-path: url(.path);
-              clip-path: url(.path);
     }
 
   .sp {
@@ -82,7 +81,7 @@
 </head>
 <body>
   <div class="logo">
-    <!-- <img class="clip-svg" src="shine.png" alt="">
+    <!--
 
     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.22 141.22">
       <path stroke="#eebc83" stroke-width="16px" stroke-linecap="round" stroke-linejoin="round" fill="none" class="path" d="M132.37 23.23 87.14 96.71 65.86 69.78 45.25 105.03 27.29 87.4 9 117.99"/>
@@ -121,7 +120,7 @@
               </stop>
             </linearGradient>
           </defs>
-          <path stroke="#eebc83" stroke-width="16px" stroke-linecap="round" stroke-linejoin="round" fill="none" class="path" d="M132.37 23.23 87.14 96.71 65.86 69.78 45.25 105.03 27.29 87.4 9 117.99"/>
+          <path stroke="#eebc83" stroke-width="16px" stroke-linecap="round" stroke-linejoin="round" fill="none" class="path" d="M9,118l18.3-30.6l18,17.6l20.6-35.2l21.3,26.9l45.2-73.5"/>
 
           </svg>
         </span>
