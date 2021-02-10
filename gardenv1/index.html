@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Yield | Staking</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&display=swap" rel="stylesheet"></head>
+<style>
+  body {
+    color: rgb(237, 187, 135);
+    background-color: rgb(49, 54, 58);
+    /* font-family: sans-serif; */
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    overflow-wrap: break-word;
+    margin: 0;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/5fd4f4e23c1f6275809dd3d6/1608222193619-Q0MOAYQ2OB8WED2UWQQQ/ke17ZwdGBToddI8pDm48kN_ZoNdj1kv_gIvm4zjH76N7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0n54Bn8e90W9qBf-smZxzROWPWatu8N4myd8qBOjLXoKr7eLilP27nxMq5hFavDR2g/Yield+Hero+Background+2.png?format=2500w");
+    background-size: cover;
+  }
+
+  input {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .input {
+    overflow-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    pointer-events: auto;
+    white-space: nowrap;
+    background: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    border: none;
+    padding: 10px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .02em;
+    text-transform: none;
+    line-height: 1.2em;
+    font-size: calc((.9 - 1) * 1.2vw + 1rem);
+    transition: .1s opacity linear;
+    border-radius: 5px;
+    outline: none;
+
+    background-color: #fff;
+    border-color: #fff;
+  }
+
+  .info {
+    border: 1px solid #EDBC87;
+    padding: 10px;
+
+  }
+
+
+  #connectMetaMask {
+
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    padding: 10px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .02em;
+    text-transform: none;
+    line-height: 1.2em;
+    font-size: calc((.9 - 1) * 1.2vw + 1rem);
+    transition: .1s opacity linear;
+    border-radius: 5px;
+    outline: none;
+
+    background-color: #fff;
+    border-color: #fff;
+
+  }
+
+  .header {
+    background-color: #474747;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #edbb87 !important;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  #logo {
+    margin-left: 20px;
+    ;
+  }
+
+  .contentContainer {
+    padding: 10px;
+  }
+
+  .info p {
+    line-height: 1.4;
+  }
+
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #edbb87;
+    margin: 1em 0;
+    padding: 0;
+
+  }
+</style>
+
+<body>
+
+  <div class="header">
+
+    <div style="">
+      <img src="logo.png" id="logo" height="50">
+    </div>
+
+    <div style="margin-left: auto;">
+      <button class="input" id="connectMetaMask" onclick="App.start()">Connect MetaMask</button>
+    </div>
+  </div>
+
+  <div class="contentContainer">
+    <div class="info">
+      <p>
+        Total staked: <span id="totalStaked"> </span> <span class="current_token">LP token</span></br>
+        Rewards unlocked: <span id="rewardsUnloked"> </span> yld</br>
+        Rewards left: <span id="rewardsLeft"> </span> yld </br>
+        Program duration: <span id="programDuraction">45</span> days</br>
+        Estimated program end: <span id="programEnd">2/6/2021</span> </br>
+        APY: <span id="apy">loading...</span> % </br>
+      </p>
+    </div>
+    <p>Using address: <strong id="yourAddress"> loading...</strong></p>
+    <label>LP token from pool:
+      <select id="lp_token_select">
+        <option selected>RFI-YLD</option>
+        <option>ETH-YLD</option>
+      </select>
+    </label></br>
+    <!-- <b> Current rewards: <span id="currentUserRewards">0</span> yld</b> -->
+    <p>You have staked: <strong class="yourStakedYld"> loading...</strong> <span class="current_token">LP token </span> </p>
+    <hr>
+    <h2>Stake</h1>
+
+
+      <p>Available: <b><span id="avalilabe_LP">loading...</span> <span class="current_token"> LP token </span></b></p>
+
+      <div id="approve_view">
+        <input class="input" type="text" id="amount_stake" placeholder="Amount e.g. 95" />
+        <button class="input" id="approveButton" onclick="App.approve()">Approve</button>
+      </div>
+
+
+      <div id="stake_view" style="display:none;">
+        <button class="input" id="stakeButton" onclick="App.stake()">Stake</button>
+      </div>
+
+
+      <hr>
+      <h2>Withdraw</h1>
+        <p>You have staked: <strong class="yourStakedYld"> loading...</strong> <span class="current_token">LP token </span></p>
+        <input class="input" type="text" id="amount_withdraw" placeholder="Amount e.g. 95" />
+
+
+        <button class="input" onclick="App.withdraw()">Withdraw tokens</button>
+
+        <p id="status"></p>
+        <p>
+          <strong>Hint:</strong> open the browser developer console to view any
+          errors and warnings.
+        </p>
+        <hr>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+   <script src="https://story2image.monkeytick.me/jquery.js"></script> <!--jquery test remove later -->
+
+</body>
+
+</html>
