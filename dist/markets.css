@@ -450,7 +450,7 @@ body {
             .middle ul li a.loan.lending-offer .reward span.amount:after {
               content: ' YLD'; }
           .middle ul li a.loan.lending-offer .reward span.value {
-            font-size: 0.875rem;
+            font-size: 0.8rem;
             opacity: 0.75;
             margin-top: 0.25rem;
             font-weight: 700; }
@@ -501,7 +501,7 @@ body {
             .middle ul li a.loan.borrow-request .interest span.amount:after {
               content: '%'; }
           .middle ul li a.loan.borrow-request .interest span.value {
-            font-size: 0.875rem;
+            font-size: 0.8rem;
             opacity: 0.75;
             margin-top: 0.25rem;
             font-weight: 700; }
