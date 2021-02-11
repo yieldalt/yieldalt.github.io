@@ -384,45 +384,6 @@ body {
             font-size: 0.875rem;
             opacity: 0.75;
             margin-top: 0.25rem; }
-    .middle ul li .info {
-      background: #1e1e1e;
-      -webkit-border-radius: 0.5rem;
-         -moz-border-radius: 0.5rem;
-              border-radius: 0.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      width: -webkit-calc(100% - 6rem);
-      width: -moz-calc(100% - 6rem);
-      width: calc(100% - 6rem);
-      padding: 0.75rem;
-      padding-left: 2.5rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      font-size: 1.125rem;
-      line-height: 1.75rem; }
-      .middle ul li .info span[class*="fa-"] {
-        margin-right: 1rem;
-        color: #efbc86;
-        width: 1rem;
-        text-align: center; }
-      .middle ul li .info span.duration:after {
-        content: ' days'; }
-      .middle ul li .info span.duration span.fas {
-        color: #ddd; }
-      .middle ul li .info span.collateral span.fas {
-        color: #51b0dc; }
-      .middle ul li .info span.interest span.fas {
-        color: #6ccda5; }
-      .middle ul li .info span.dollars {
-        opacity: 0.7;
-        font-weight: 300;
-        padding-left: 2rem;
-        font-size: 0.875rem;
-        line-height: 1.75rem; }
-        .middle ul li .info span.dollars:before {
-          content: '$'; }
-        .middle ul li .info span.dollars span.fas {
-          color: #fff;
-          display: none; }
     .middle ul li a.loan {
       position: relative;
       display: -webkit-box;
@@ -445,6 +406,9 @@ body {
         -webkit-backface-visibility: hidden;
            -moz-backface-visibility: hidden;
                 backface-visibility: hidden; }
+      @media screen and (max-width: 480px) {
+        .middle ul li a.loan.lending-offer .info {
+          grid-template-columns: 1.5fr 1fr auto; } }
       .middle ul li a.loan.lending-offer .reward {
         background: #efbc86;
         color: #181b1e;
@@ -452,7 +416,7 @@ body {
            -moz-border-radius: 0.5rem;
                 border-radius: 0.5rem;
         padding: 0.75rem 0.5rem;
-        width: 6rem;
+        min-width: 5rem;
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-box;
@@ -482,7 +446,7 @@ body {
           display: inline-block; }
           .middle ul li a.loan.lending-offer .reward span.amount {
             font-weight: 700;
-            font-size: 1.25rem; }
+            font-size: 1rem; }
             .middle ul li a.loan.lending-offer .reward span.amount:after {
               content: ' YLD'; }
           .middle ul li a.loan.lending-offer .reward span.value {
@@ -490,6 +454,12 @@ body {
             opacity: 0.75;
             margin-top: 0.25rem;
             font-weight: 700; }
+      @media screen and (max-width: 480px) {
+        .middle ul li a.loan.lending-offer .duration {
+          display: none; } }
+      @media screen and (max-width: 480px) {
+        .middle ul li a.loan.borrow-request .info {
+          grid-template-columns: 1fr 1fr auto; } }
       .middle ul li a.loan.borrow-request .interest {
         background: #efbc86;
         color: #181b1e;
@@ -497,7 +467,7 @@ body {
            -moz-border-radius: 0.5rem;
                 border-radius: 0.5rem;
         padding: 0.75rem 0.5rem;
-        width: 6rem;
+        min-width: 5rem;
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-box;
@@ -527,7 +497,7 @@ body {
           display: inline-block; }
           .middle ul li a.loan.borrow-request .interest span.amount {
             font-weight: 700;
-            font-size: 1.25rem; }
+            font-size: 1rem; }
             .middle ul li a.loan.borrow-request .interest span.amount:after {
               content: '%'; }
           .middle ul li a.loan.borrow-request .interest span.value {
@@ -537,15 +507,18 @@ body {
             font-weight: 700; }
       .middle ul li a.loan.borrow-request .reward p:not([class]):after {
         content: ' YLD'; }
+      @media screen and (max-width: 480px) {
+        .middle ul li a.loan.borrow-request .reward {
+          display: none; } }
       .middle ul li a.loan .info {
         background: #1e1e1e;
         -webkit-border-radius: 0.5rem;
            -moz-border-radius: 0.5rem;
                 border-radius: 0.5rem;
         border: 1px solid rgba(255, 255, 255, 0.05);
-        width: -webkit-calc(100% - 5.5rem);
-        width: -moz-calc(100% - 5.5rem);
-        width: calc(100% - 5.5rem);
+        width: -webkit-calc(100% - 4.5rem);
+        width: -moz-calc(100% - 4.5rem);
+        width: calc(100% - 4.5rem);
         padding: 0.75rem;
         padding-left: 1.75rem;
         -webkit-transition: all 0.2s ease-out;
@@ -554,7 +527,7 @@ body {
         transition: all 0.2s ease-out;
         display: grid;
         grid-gap: 1rem;
-        grid-template-columns: 3fr 3fr 1.5fr 2rem;
+        grid-template-columns: 3fr 3fr 1.5fr auto;
         -webkit-box-align: stretch;
         -webkit-align-items: stretch;
            -moz-box-align: stretch;
@@ -562,6 +535,9 @@ body {
                 align-items: stretch;
         font-size: 1.125rem;
         line-height: 1.75rem; }
+        @media screen and (max-width: 567px) {
+          .middle ul li a.loan .info {
+            border-right: 2px solid #efbc86; } }
         .middle ul li a.loan .info > div {
           text-align: left;
           position: relative;
@@ -652,6 +628,9 @@ body {
           transition: all 0.2s ease-out; }
         .middle ul li a.loan .arrow:after {
           display: none !important; }
+        @media screen and (max-width: 576px) {
+          .middle ul li a.loan .arrow {
+            display: none !important; } }
       .middle ul li a.loan:hover > .reward,
       .middle ul li a.loan:hover > .interest, .middle ul li a.loan:focus > .reward,
       .middle ul li a.loan:focus > .interest {
