@@ -21,7 +21,7 @@ html {
   background: linear-gradient(0deg, black 0%, #181818 100%); }
   @media screen and (max-width: 640px) {
     html {
-      font-size: 14px; } }
+      font-size: 12px; } }
 
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
@@ -549,7 +549,7 @@ body {
           .middle ul li a.loan .info > div:not(.duration):not(.arrow) {
             padding-right: 1rem; }
             @media screen and (max-width: 480px) {
-              .middle ul li a.loan .info > div:not(.duration):not(.arrow).interest {
+              .middle ul li a.loan .info > div:not(.duration):not(.arrow).interest, .middle ul li a.loan .info > div:not(.duration):not(.arrow).collateral {
                 padding-right: 0; } }
           .middle ul li a.loan .info > div:not(:first-child):after {
             content: '';
