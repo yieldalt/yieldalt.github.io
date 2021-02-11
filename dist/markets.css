@@ -441,7 +441,10 @@ body {
         -webkit-transition: all 0.2s ease-out;
         -o-transition: all 0.2s ease-out;
         -moz-transition: all 0.2s ease-out;
-        transition: all 0.2s ease-out; }
+        transition: all 0.2s ease-out;
+        -webkit-backface-visibility: hidden;
+           -moz-backface-visibility: hidden;
+                backface-visibility: hidden; }
       .middle ul li a.loan.lending-offer .reward {
         background: #efbc86;
         color: #181b1e;
