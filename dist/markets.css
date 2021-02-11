@@ -245,7 +245,8 @@ body {
   width: 100%;
   padding: 1rem 1.5rem;
   position: relative;
-  overflow: auto; }
+  overflow: auto;
+  overflow-x: hidden; }
   .middle:after {
     content: '';
     position: absolute;
@@ -266,7 +267,6 @@ body {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    overflow: auto;
     padding: .5rem 0 0 0; }
   .middle ul {
     width: 100%;
