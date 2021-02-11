@@ -408,7 +408,7 @@ body {
                 backface-visibility: hidden; }
       @media screen and (max-width: 480px) {
         .middle ul li a.loan.lending-offer .info {
-          grid-template-columns: 1.5fr 1fr auto; } }
+          grid-template-columns: 1.5fr 1fr; } }
       .middle ul li a.loan.lending-offer .reward {
         background: #efbc86;
         color: #181b1e;
@@ -459,7 +459,7 @@ body {
           display: none; } }
       @media screen and (max-width: 480px) {
         .middle ul li a.loan.borrow-request .info {
-          grid-template-columns: 1fr 1fr auto; } }
+          grid-template-columns: 1fr 1fr; } }
       .middle ul li a.loan.borrow-request .interest {
         background: #efbc86;
         color: #181b1e;
@@ -560,6 +560,9 @@ body {
                   flex-direction: column; }
           .middle ul li a.loan .info > div:not(.duration):not(.arrow) {
             padding-right: 1rem; }
+            @media screen and (max-width: 480px) {
+              .middle ul li a.loan .info > div:not(.duration):not(.arrow).interest {
+                padding-right: 0; } }
           .middle ul li a.loan .info > div:not(:first-child):after {
             content: '';
             display: block;
