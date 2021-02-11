@@ -243,7 +243,7 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
   position: relative;
   overflow: auto;
   overflow-x: hidden; }
