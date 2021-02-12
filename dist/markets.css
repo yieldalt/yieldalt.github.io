@@ -723,11 +723,14 @@ body {
                 border-radius: 50%;
         display: inline-block;
         border: 1px solid rgba(255, 255, 255, 0.75); }
-      .assets ul li a.active, .assets ul li a:hover, .assets ul li a:focus {
+      .assets ul li a.active {
         background: #eee;
+        border-color: #eee;
         color: #181b1e; }
-        .assets ul li a.active img, .assets ul li a:hover img, .assets ul li a:focus img {
+        .assets ul li a.active img {
           border-color: transparent; }
+      .assets ul li a:hover, .assets ul li a:focus {
+        border-color: #aaa; }
 
 .values {
   width: 100%;

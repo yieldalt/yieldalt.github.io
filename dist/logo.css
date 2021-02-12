@@ -16,7 +16,7 @@ html {
   background: linear-gradient(0deg, black 0%, #181818 100%); }
   @media screen and (max-width: 640px) {
     html {
-      font-size: 14px; } }
+      font-size: 12px; } }
 
 body {
   display: -webkit-box;
