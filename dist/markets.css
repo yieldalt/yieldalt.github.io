@@ -699,7 +699,7 @@ body {
               align-items: center;
       padding: 0.325rem 0.75rem 0.325rem 0.325rem;
       background: #1e1e1e;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.05);
       -webkit-border-radius: 2.75rem;
          -moz-border-radius: 2.75rem;
               border-radius: 2.75rem;
@@ -724,8 +724,7 @@ body {
         display: inline-block;
         border: 1px solid rgba(255, 255, 255, 0.75); }
       .assets ul li a.active, .assets ul li a:hover, .assets ul li a:focus {
-        background: #efbc86;
-        background: #ddd;
+        background: #eee;
         color: #181b1e; }
         .assets ul li a.active img, .assets ul li a:hover img, .assets ul li a:focus img {
           border-color: transparent; }
@@ -769,7 +768,7 @@ body {
               align-items: center;
       padding: 0.75rem 0.75rem;
       background: #1e1e1e;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.05);
       -webkit-border-radius: 2.75rem;
          -moz-border-radius: 2.75rem;
               border-radius: 2.75rem;
