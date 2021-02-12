@@ -10,8 +10,27 @@ if( $('.inside h1').length ){
   });
 }
 
-$('p, span').html(function(i, v){
+$('p, span, .values a').html(function(i, v){
     return v.replace(/(\d)/g, '<span class="number">$1</span>');
 });
+
+
+
+$('.assets ul a').click(function(e){
+  e.preventDefault();
+  var $this = $(this);
+  $this.toggleClass('active');
+  //$this.parents('ul').prepend($this.parent());
+});
+
+// var assets = [];
+// $('.assets ul li').each(function(){
+//   assets.push($(this));
+// });
+//
+// $('.assets a.reset').click(function(e){
+//   e.preventDefault();
+//   $('.assets ul').innerHTML = assets.join(" ");
+// });
 
 });
