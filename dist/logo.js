@@ -16,7 +16,7 @@ $('p, span, .values a').html(function(i, v){
 
 
 
-$('.assets ul a').click(function(e){
+$('.assets ul a, .values ul a').click(function(e){
   e.preventDefault();
   var $this = $(this);
   $this.toggleClass('active');
