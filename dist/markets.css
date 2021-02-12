@@ -649,7 +649,8 @@ body {
 
 .assets {
   width: 100%;
-  position: relative; }
+  position: relative;
+  padding: 0 1rem; }
   .assets h2 {
     margin: 0;
     font-weight: 600;
@@ -659,9 +660,11 @@ body {
     text-transform: uppercase;
     line-height: 1rem;
     color: rgba(255, 255, 255, 0.8);
-    text-align: center; }
+    text-align: left;
+    display: none; }
   .assets:before {
     content: '';
+    display: none;
     position: absolute;
     top: -2rem;
     width: 100%;
@@ -679,8 +682,8 @@ body {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 1rem;
-    overflow: scroll; }
+    overflow: scroll;
+    padding: 1rem 0; }
     .assets ul li:not(:last-child) {
       margin-right: 1rem; }
     .assets ul li a {
@@ -729,7 +732,9 @@ body {
 
 .values {
   width: 100%;
-  position: relative; }
+  position: relative;
+  padding: 0 1rem;
+  display: none; }
   .values h2 {
     margin: 0;
     font-weight: 600;
@@ -739,15 +744,16 @@ body {
     text-transform: uppercase;
     line-height: 1rem;
     color: rgba(255, 255, 255, 0.8);
-    text-align: center; }
+    text-align: left;
+    display: none; }
   .values ul {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 1rem;
-    overflow: scroll; }
+    overflow: scroll;
+    padding: 1rem 0; }
     .values ul li:not(:last-child) {
       margin-right: 1rem; }
     .values ul li a {
