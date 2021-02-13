@@ -669,18 +669,18 @@ body {
       line-height: 1.75rem;
       display: grid;
       grid-gap: 1.5rem;
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 2fr 1fr;
       position: relative; }
       @media screen and (min-width: 768px) {
         .middle .details .box2 {
-          grid-template-columns: 1fr 1.5fr; } }
+          grid-template-columns: 1.5fr 1fr; } }
       .middle .details .box2:after {
         content: '';
         display: block;
         height: 85%;
         width: 1px;
         position: absolute;
-        left: 33.33334%;
+        right: 33.33334%;
         top: 50%;
         -webkit-transform: translate(0, -50%);
            -moz-transform: translate(0, -50%);
@@ -690,9 +690,7 @@ body {
         background: rgba(255, 255, 255, 0.2); }
         @media screen and (min-width: 768px) {
           .middle .details .box2:after {
-            left: 39.5%; } }
-      .middle .details .box2.reward-box {
-        border-left: 2px solid #efbc86; }
+            right: 39.5%; } }
       .middle .details .box2 > * {
         display: grid;
         grid-template-columns: 1fr;
@@ -715,29 +713,29 @@ body {
              -moz-box-align: baseline;
               -ms-flex-align: baseline;
                   align-items: baseline; }
-      .middle .details .box2 .left {
+      .middle .details .box2 .right {
         -webkit-box-align: start;
         -webkit-align-items: flex-start;
            -moz-box-align: start;
             -ms-flex-align: start;
                 align-items: flex-start; }
-        .middle .details .box2 .left > * {
-          -webkit-box-align: start;
-          -webkit-align-items: flex-start;
-             -moz-box-align: start;
-              -ms-flex-align: start;
-                  align-items: flex-start; }
-      .middle .details .box2 .right {
+        .middle .details .box2 .right > * {
+          -webkit-box-align: end;
+          -webkit-align-items: flex-end;
+             -moz-box-align: end;
+              -ms-flex-align: end;
+                  align-items: flex-end; }
+      .middle .details .box2 .left {
         -webkit-box-align: end;
         -webkit-align-items: flex-end;
            -moz-box-align: end;
             -ms-flex-align: end;
                 align-items: flex-end; }
-        .middle .details .box2 .right h3 {
+        .middle .details .box2 .left h3 {
           grid-column: 1;
           grid-row: 1;
           margin-top: 0; }
-        .middle .details .box2 .right > * {
+        .middle .details .box2 .left > * {
           -webkit-box-align: end;
           -webkit-align-items: flex-end;
              -moz-box-align: end;
@@ -745,7 +743,91 @@ body {
                   align-items: flex-end;
           display: grid;
           grid-template-columns: 1fr 1fr; }
-          .middle .details .box2 .right > * > :not(h3) {
+          .middle .details .box2 .left > * > :not(h3) {
+            grid-column: 2;
+            text-align: right; }
+    .middle .details .box3 {
+      background: #1e1e1e;
+      -webkit-border-radius: 0.5rem;
+         -moz-border-radius: 0.5rem;
+              border-radius: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      -webkit-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      display: grid;
+      grid-gap: 1.5rem;
+      grid-template-columns: 1fr;
+      position: relative; }
+      @media screen and (min-width: 768px) {
+        .middle .details .box3 {
+          grid-template-columns: 1fr; } }
+      .middle .details .box3 > * {
+        display: grid;
+        grid-template-columns: 1fr; }
+        .middle .details .box3 > * > * {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-flow: column wrap;
+             -moz-box-orient: vertical;
+             -moz-box-direction: normal;
+              -ms-flex-flow: column wrap;
+                  flex-flow: column wrap;
+          -webkit-box-align: baseline;
+          -webkit-align-items: baseline;
+             -moz-box-align: baseline;
+              -ms-flex-align: baseline;
+                  align-items: baseline; }
+      .middle .details .box3 .right {
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+           -moz-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start; }
+        .middle .details .box3 .right > * {
+          -webkit-box-align: end;
+          -webkit-align-items: flex-end;
+             -moz-box-align: end;
+              -ms-flex-align: end;
+                  align-items: flex-end; }
+      .middle .details .box3 .left {
+        -webkit-box-align: end;
+        -webkit-align-items: flex-end;
+           -moz-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end; }
+        .middle .details .box3 .left h3 {
+          grid-column: 1;
+          grid-row: 1;
+          margin-top: 0; }
+        .middle .details .box3 .left > * {
+          -webkit-box-align: end;
+          -webkit-align-items: flex-end;
+             -moz-box-align: end;
+              -ms-flex-align: end;
+                  align-items: flex-end;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          padding: 1rem; }
+          .middle .details .box3 .left > *:not(:last-child) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1rem; }
+          .middle .details .box3 .left > *.reward {
+            background: #c1976a; }
+            .middle .details .box3 .left > *.reward h3, .middle .details .box3 .left > *.reward span {
+              color: #181b1e !important;
+              opacity: 1; }
+              .middle .details .box3 .left > *.reward h3.number, .middle .details .box3 .left > *.reward span.number {
+                font-size: 1.5rem; }
+          .middle .details .box3 .left > * > :not(h3) {
             grid-column: 2;
             text-align: right; }
     .middle .details h3 {
