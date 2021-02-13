@@ -691,6 +691,10 @@ body {
         @media screen and (min-width: 768px) {
           .middle .details .box2:after {
             right: 39.5%; } }
+      .middle .details .box2 .divider {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        width: 85%;
+        margin: 0 auto; }
       .middle .details .box2 > * {
         display: grid;
         grid-template-columns: 1fr;
