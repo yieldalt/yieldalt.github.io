@@ -79,7 +79,8 @@ body {
 .number {
   font-family: "IBM Plex Mono", monospace;
   font-family: "Roboto Mono", monospace;
-  font-size: 1.025em; }
+  font-family: "Inter", sans-serif;
+  font-variant-numeric: tabular-nums; }
 
 .wrapper {
   width: 700px;
@@ -132,6 +133,7 @@ body {
               border-radius: 0; } }
 
 .top {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -149,7 +151,7 @@ body {
     margin: 0;
     font-weight: 500;
     font-size: 2rem; }
-  .top a {
+  .top a.profile {
     -webkit-border-radius: 50%;
        -moz-border-radius: 50%;
             border-radius: 50%;
@@ -175,12 +177,48 @@ body {
     -o-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out; }
-    .top a svg {
+    .top a.profile svg {
       fill: #efbc86;
       width: 1.5rem;
       height: 1.5rem; }
-    .top a:hover, .top a:focus {
+    .top a.profile:hover, .top a.profile:focus {
       border-color: rgba(239, 188, 134, 0.5); }
+  .top a.back {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 1rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
+    .top a.back:hover, .top a.back:focus {
+      color: #efbc86; }
+  .top a.share {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 1rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
+    .top a.share:hover, .top a.share:focus {
+      color: #efbc86; }
 
 .toggle {
   display: -webkit-box;
