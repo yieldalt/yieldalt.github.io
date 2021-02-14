@@ -788,9 +788,10 @@ body {
       .middle .details .circular-chart .label {
         fill: #efbc86;
         font-family: "Inter", sans-serif;
-        font-size: 25%;
-        font-weight: 700;
-        text-anchor: middle; }
+        font-size: 22%;
+        font-weight: 600;
+        text-anchor: middle;
+        opacity: 0.75; }
 
 @-webkit-keyframes progress {
   0% {
