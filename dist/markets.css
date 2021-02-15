@@ -917,14 +917,14 @@ body {
             .middle .details .box3 .left .collateral-details > * h3 {
               grid-row: unset;
               grid-column: 1;
-              font-size: 0.625rem;
+              font-size: 0.675rem;
               line-height: 1rem; }
             .middle .details .box3 .left .collateral-details > * .amount {
-              line-height: 1.25rem; }
+              line-height: 1.325rem; }
             .middle .details .box3 .left .collateral-details > *.collateral h3 {
               grid-row: 3 !important; }
             .middle .details .box3 .left .collateral-details > * .amount {
-              font-size: 0.875rem; }
+              font-size: 0.925rem; }
             .middle .details .box3 .left .collateral-details > * .dollars {
               margin: 0; }
             .middle .details .box3 .left .collateral-details > *:nth-child(1) {
