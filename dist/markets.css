@@ -306,7 +306,14 @@ body {
   padding: 1rem 1rem;
   position: relative;
   overflow: auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  /* Hide scrollbar for Chrome, Safari and Opera */ }
+  .middle::-webkit-scrollbar {
+    display: none; }
   .middle.lightBg {
     background: #181818;
     -webkit-box-pack: justify;
@@ -1173,7 +1180,14 @@ body {
     display: -ms-flexbox;
     display: flex;
     overflow: scroll;
-    padding: 1rem 0; }
+    padding: 1rem 0;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    /* Hide scrollbar for Chrome, Safari and Opera */ }
+    .assets ul::-webkit-scrollbar {
+      display: none; }
     .assets ul li:not(:last-child) {
       margin-right: 1rem; }
     .assets ul li a {
@@ -1245,7 +1259,14 @@ body {
     display: -ms-flexbox;
     display: flex;
     overflow: scroll;
-    padding: 1rem 0; }
+    padding: 1rem 0;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    /* Hide scrollbar for Chrome, Safari and Opera */ }
+    .values ul::-webkit-scrollbar {
+      display: none; }
     .values ul li:not(:last-child) {
       margin-right: 1rem; }
     .values ul li a {
