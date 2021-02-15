@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Logo</title>
   <link rel="stylesheet" href="../dist/markets.css">
@@ -54,6 +54,44 @@
             <div class="duration">
               <span class="amount"><span class="number">21</span> days</span>
               <h3>Duration</h3>
+            </div>
+          </div>
+        </div>
+        <div class="collateral-slider">
+          <div class="slider">
+            <div class="collateral">
+              <h3>Collateral</h3>
+            </div>
+            <div class="asset-type">
+              <div>
+                <span class="amount"><span class="number">0.62218</span></span>
+                <div class="select-wrapper">
+                  <select name="assetType" id="assetType">
+                    <option value="WBTC" selected>WBTC</option>
+                    <option value="ETH">ETH</option>
+                    <option value="AMPL">AMPL</option>
+                    <option value="USDT">USDT</option>
+                    <option value="DAI">DAI</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="input-group">
+              <input class="inputRange" type="range" step="0.01" min="0" max="1.5" value="0.52661"/>
+            </div>
+          </div>
+          <div class="collateral-details">
+            <div class="liquidation-price">
+              <span class="amount"><span class="number">$43,460.41</span></span>
+              <h3>Liq. Price (WBTC)</h3>
+            </div>
+            <div class="ratio">
+              <span class="amount"><span class="number">155%</span></span>
+              <h3>Ratio</h3>
+            </div>
+            <div class="current-price">
+              <span class="amount"><span class="number">1.42559</span> WBTC</span>
+              <h3>Balance</h3>
             </div>
           </div>
         </div>
