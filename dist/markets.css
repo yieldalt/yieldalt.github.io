@@ -681,7 +681,7 @@ body {
       grid-gap: 1.5rem;
       grid-template-columns: 2fr 1fr;
       position: relative; }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 769px) {
         .middle .details .box2 {
           grid-template-columns: 1.5fr 1fr; } }
       .middle .details .box2:after {
@@ -698,7 +698,7 @@ body {
              -o-transform: translate(0, -50%);
                 transform: translate(0, -50%);
         background: rgba(255, 255, 255, 0.2); }
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 769px) {
           .middle .details .box2:after {
             right: 39.5%; } }
       .middle .details .box2 .divider {
@@ -822,7 +822,7 @@ body {
       transition: all 0.2s ease-out;
       font-size: 1.125rem;
       line-height: 1.75rem; }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 769px) {
         .middle .details .box3 {
           grid-template-columns: 1fr; } }
       .middle .details .box3 > * {
@@ -919,12 +919,22 @@ body {
               grid-column: 1;
               font-size: 0.675rem;
               line-height: 1rem; }
+              @media screen and (min-width: 769px) {
+                .middle .details .box3 .left .collateral-details > * h3 {
+                  line-height: 1.25rem;
+                  font-size: 0.875rem; } }
             .middle .details .box3 .left .collateral-details > * .amount {
               line-height: 1.325rem; }
+              @media screen and (min-width: 769px) {
+                .middle .details .box3 .left .collateral-details > * .amount {
+                  line-height: 1.5rem; } }
             .middle .details .box3 .left .collateral-details > *.collateral h3 {
               grid-row: 3 !important; }
             .middle .details .box3 .left .collateral-details > * .amount {
               font-size: 0.925rem; }
+              @media screen and (min-width: 769px) {
+                .middle .details .box3 .left .collateral-details > * .amount {
+                  font-size: 1.125rem; } }
             .middle .details .box3 .left .collateral-details > * .dollars {
               margin: 0; }
             .middle .details .box3 .left .collateral-details > *:nth-child(1) {
