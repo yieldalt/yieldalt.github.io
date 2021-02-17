@@ -14,14 +14,58 @@
   <div class="wrapper">
     <div class="top">
       <a class="back" href="borrow.html"><span class="fas fa-arrow-left"></span></a>
-      <h1>Lending Offer</h1>
+      <h1>New Borrow Request</h1>
       <!-- <a class="share" href="#"><span class="fas fa-share-alt"></span></a> -->
     </div>
     <div class="middle lightBg">
-      <h2 class="offScreen">Lending Offer Information</h2>
+      <h2 class="offScreen">New Borrow Request Information</h2>
       <div class="details">
         <div class="box">
-          <div class="top-details">
+          <div class="top-details new">
+            <div class="slider-wrapper">
+              <div class="slider">
+                <div class="heading">
+                  <h3>Principal</h3>
+                </div>
+                <div class="value">
+                  <!-- <h3>Bal:</h3> -->
+                  <span class="dollars">$0.00</span>
+                </div>
+                <div class="input-group">
+                  <input class="set-principal" type="number" value="0.00000000"/>
+                  <div class="asset-type">
+                    <div>
+                      <!-- <span class="amount"><span class="number">0.62218</span></span> -->
+                      <div class="select-wrapper">
+                        <select name="assetType" id="assetType">
+                          <option value="WBTC" selected>WBTC</option>
+                          <option value="ETH">ETH</option>
+                          <option value="AMPL">AMPL</option>
+                          <option value="USDT">USDT</option>
+                          <option value="DAI">DAI</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="balance">
+                  <h3>Bal: </h3>
+                  <span class="amount"><span class="number">1.42559</span></span>
+                </div>
+              </div>
+              <!-- <div class="slider-details">
+                <div class="ratio">
+                  <span class="amount"><span class="number">155%</span></span>
+                  <h3>Ratio</h3>
+                </div>
+                <div class="current-price">
+                  <span class="amount"><span class="number">1.42559</span></span>
+                  <h3>Balance</h3>
+                </div>
+              </div> -->
+            </div>
+
             <div class="interest">
               <svg viewBox="0 0 36 36" class="circular-chart orange">
                 <path class="circle-bg"
@@ -30,22 +74,22 @@
                     a 15.9155 15.9155 0 0 1 0 -31.831"
                 />
                 <path class="circle"
-                  stroke-dasharray="100, 100"
+                  stroke-dasharray="45, 100"
                   d="M18 2.0845
                     a 15.9155 15.9155 0 0 1 0 31.831
                     a 15.9155 15.9155 0 0 1 0 -31.831"
                 />
-                <text x="18" y="17.5" class="percentage" font-size-adjust="0.25">35.7</text>
+                <text x="18" y="17.5" class="percentage" font-size-adjust="0.25">1.44</text>
                 <text x="18" y="23.25" class="label" font-size-adjust="0.25">YLD REWARD</text>
               </svg>
             </div>
-            <div class="principal">
+            <!-- <div class="principal">
               <span class="amount"><span class="number">9.455</span> ETH</span>
               <span class="dollars">$12,495</span>
               <h3>Principal</h3>
-            </div>
+            </div> -->
           </div>
-          <div class="left">
+          <!-- <div class="left">
             <div class="interest">
               <span class="amount"><span class="number">10.25%</span></span>
               <span class="dollars">$1,283.74</span>
@@ -54,6 +98,36 @@
             <div class="duration">
               <span class="amount"><span class="number">21</span> days</span>
               <h3>Duration</h3>
+            </div>
+          </div> -->
+        </div>
+        <div class="slider-wrapper">
+          <div class="slider">
+            <div class="heading">
+              <h3>Interest</h3>
+            </div>
+            <div class="asset-type">
+              <div>
+                <span class="amount"><span class="number">2.00%</span></span>
+              </div>
+            </div>
+            <div class="input-group">
+              <input class="inputRange" type="range" step="0.25" min="2" max="12.5" value="2"/>
+            </div>
+          </div>
+        </div>
+        <div class="slider-wrapper">
+          <div class="slider">
+            <div class="heading">
+              <h3>Duration</h3>
+            </div>
+            <div class="asset-type">
+              <div>
+                <span class="amount"><span class="number">8</span> days</span>
+              </div>
+            </div>
+            <div class="input-group">
+              <input class="inputRange" type="range" step="1" min="8" max="40" value="8"/>
             </div>
           </div>
         </div>
@@ -90,14 +164,15 @@
               <h3>Ratio</h3>
             </div>
             <div class="current-price">
-              <span class="amount"><span class="number">1.42559</span> WBTC</span>
+              <span class="amount"><span class="number">1.42559</span></span>
               <h3>Balance</h3>
             </div>
           </div>
         </div>
+
       </div>
       <div class="lend-btn">
-        <a href="#">Borrow</a>
+        <a href="#">Create</a>
       </div>
     </div>
   </div>
