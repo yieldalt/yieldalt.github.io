@@ -732,8 +732,8 @@ body {
       -moz-transition: all 0.2s ease-out;
       transition: all 0.2s ease-out;
       display: grid;
-      grid-gap: 1rem;
-      grid-template-columns: 1fr auto;
+      grid-gap: 1.5rem;
+      grid-template-columns: 2.33fr 2.33fr 2.33fr 1fr;
       -webkit-box-align: stretch;
       -webkit-align-items: stretch;
          -moz-box-align: stretch;
@@ -743,8 +743,32 @@ body {
       line-height: 1.75rem;
       color: #fff;
       text-decoration: none; }
+      .middle .profile .loans article ul a.info.active-lending {
+        font-size: 1.125rem;
+        line-height: 1.75rem; }
+        .middle .profile .loans article ul a.info.active-lending > *:not(:last-child) {
+          padding-right: 1rem; }
+        .middle .profile .loans article ul a.info.active-lending > *:not(:first-child):not(.empty):after {
+          content: '';
+          display: block;
+          height: 85%;
+          width: 1px;
+          position: absolute;
+          left: -1rem;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+             -moz-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+               -o-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          background: rgba(255, 255, 255, 0.2); }
+        @media screen and (max-width: 567px) {
+          .middle .profile .loans article ul a.info.active-lending {
+            grid-template-columns: 1fr 1fr 0.75fr; }
+            .middle .profile .loans article ul a.info.active-lending .empty {
+              display: none; } }
       .middle .profile .loans article ul a.info.active-borrow {
-        grid-template-columns: 1fr 1fr 1fr auto;
+        grid-template-columns: 2.33fr 2.33fr 2.33fr 1fr;
         -webkit-box-align: stretch;
         -webkit-align-items: stretch;
            -moz-box-align: stretch;
@@ -752,15 +776,13 @@ body {
                 align-items: stretch;
         font-size: 1.125rem;
         line-height: 1.75rem; }
-        .middle .profile .loans article ul a.info.active-borrow .spacer {
-          height: 1rem; }
-        .middle .profile .loans article ul a.info.active-borrow > *:not(:first-child):after {
+        .middle .profile .loans article ul a.info.active-borrow > *:not(:first-child):not(.empty):after {
           content: '';
           display: block;
           height: 85%;
           width: 1px;
           position: absolute;
-          left: -1.25rem;
+          left: -1rem;
           top: 50%;
           -webkit-transform: translateY(-50%);
              -moz-transform: translateY(-50%);
@@ -770,7 +792,7 @@ body {
           background: rgba(255, 255, 255, 0.2); }
         @media screen and (max-width: 567px) {
           .middle .profile .loans article ul a.info.active-borrow {
-            grid-template-columns: 1fr 1fr auto; }
+            grid-template-columns: 1fr 1fr 0.75fr; }
             .middle .profile .loans article ul a.info.active-borrow .status {
               display: none; } }
       .middle .profile .loans article ul a.info h3 {
@@ -802,10 +824,10 @@ body {
       @media screen and (max-width: 567px) {
         .middle .profile .loans article ul a.info {
           border-right: 2px solid #efbc86; }
-          .middle .profile .loans article ul a.info.active, .middle .profile .loans article ul a.info.active-borrow {
+          .middle .profile .loans article ul a.info.active, .middle .profile .loans article ul a.info.active-borrow, .middle .profile .loans article ul a.info.active-lending {
             border-right: 2px solid #59d379; }
           .middle .profile .loans article ul a.info.repaid {
-            border-right: 2px solid #ff9d57; }
+            border-right: 2px solid #efbc86; }
           .middle .profile .loans article ul a.info.defaulted {
             border-right: 2px solid #f84a4a; } }
       .middle .profile .loans article ul a.info > div {
@@ -879,14 +901,14 @@ body {
             display: inline-block;
             margin: 0 0.325rem;
             line-height: 1.125rem; }
-          .middle .profile .loans article ul a.info > div.status.active, .middle .profile .loans article ul a.info > div.status.active-borrow {
+          .middle .profile .loans article ul a.info > div.status.active, .middle .profile .loans article ul a.info > div.status.active-borrow, .middle .profile .loans article ul a.info > div.status.active-lending {
             color: #59d379; }
-            .middle .profile .loans article ul a.info > div.status.active span.fas, .middle .profile .loans article ul a.info > div.status.active-borrow span.fas {
+            .middle .profile .loans article ul a.info > div.status.active span.fas, .middle .profile .loans article ul a.info > div.status.active-borrow span.fas, .middle .profile .loans article ul a.info > div.status.active-lending span.fas {
               color: #59d379; }
           .middle .profile .loans article ul a.info > div.status.repaid {
-            color: #ff9d57; }
+            color: #efbc86; }
             .middle .profile .loans article ul a.info > div.status.repaid span.fas {
-              color: #ff9d57; }
+              color: #efbc86; }
           .middle .profile .loans article ul a.info > div.status.defaulted {
             color: #f84a4a; }
             .middle .profile .loans article ul a.info > div.status.defaulted span.fas {
@@ -898,8 +920,6 @@ body {
             @media screen and (max-width: 567px) {
               .middle .profile .loans article ul a.info > div.status span.fas {
                 display: none; } }
-        .middle .profile .loans article ul a.info > div:not(.status) {
-          padding-right: 0.5rem; }
   .middle .details .circular-chart {
     display: block;
     margin: 0 0 0 auto;
