@@ -770,7 +770,7 @@ body {
           background: rgba(255, 255, 255, 0.2); }
         @media screen and (max-width: 567px) {
           .middle .profile .loans article ul a.info.active-borrow {
-            grid-template-columns: 1fr 1fr 1fr; }
+            grid-template-columns: 1fr 1fr auto; }
             .middle .profile .loans article ul a.info.active-borrow .status {
               display: none; } }
       .middle .profile .loans article ul a.info h3 {
@@ -840,9 +840,13 @@ body {
           font-family: "Inter", sans-serif; }
           .middle .profile .loans article ul a.info > div.duration p:first-child {
             font-family: "Roboto Mono", monospace;
-            font-size: 1rem;
+            font-size: 1.125rem;
+            line-height: 1.25rem;
             opacity: 1;
             margin-bottom: 0.25rem; }
+        @media screen and (max-width: 567px) {
+          .middle .profile .loans article ul a.info > div.duration {
+            padding-right: 0; } }
         .middle .profile .loans article ul a.info > div.status {
           display: -webkit-box;
           display: -webkit-flex;
