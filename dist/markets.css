@@ -743,6 +743,22 @@ body {
       line-height: 1.75rem;
       color: #fff;
       text-decoration: none; }
+      .middle .profile .loans article ul a.info > *:not(:last-child) {
+        padding-right: 1rem; }
+      .middle .profile .loans article ul a.info > *:not(:first-child):not(.empty):after {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 1px;
+        position: absolute;
+        left: -1rem;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+           -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+             -o-transform: translateY(-50%);
+                transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.025); }
       .middle .profile .loans article ul a.info.active-lending {
         font-size: 1.125rem;
         line-height: 1.75rem; }
@@ -761,7 +777,7 @@ body {
               -ms-transform: translateY(-50%);
                -o-transform: translateY(-50%);
                   transform: translateY(-50%);
-          background: rgba(255, 255, 255, 0.1); }
+          background: rgba(255, 255, 255, 0.025); }
         @media screen and (max-width: 567px) {
           .middle .profile .loans article ul a.info.active-lending {
             grid-template-columns: 1fr 1fr 0.75fr; }
@@ -789,12 +805,19 @@ body {
               -ms-transform: translateY(-50%);
                -o-transform: translateY(-50%);
                   transform: translateY(-50%);
-          background: rgba(0, 0, 0, 0.25); }
+          background: rgba(255, 255, 255, 0.025); }
         @media screen and (max-width: 567px) {
           .middle .profile .loans article ul a.info.active-borrow {
             grid-template-columns: 1fr 1fr 0.75fr; }
             .middle .profile .loans article ul a.info.active-borrow .status {
               display: none; } }
+      @media screen and (max-width: 567px) {
+        .middle .profile .loans article ul a.info.repaid, .middle .profile .loans article ul a.info.defaulted, .middle .profile .loans article ul a.info.my {
+          grid-template-columns: 1fr 1fr 0.75fr; }
+          .middle .profile .loans article ul a.info.repaid .empty, .middle .profile .loans article ul a.info.defaulted .empty, .middle .profile .loans article ul a.info.my .empty {
+            display: none; } }
+      .middle .profile .loans article ul a.info.my .duration p:first-child {
+        margin-bottom: 0.35rem; }
       .middle .profile .loans article ul a.info h3 {
         margin: 0;
         font-weight: 600;
