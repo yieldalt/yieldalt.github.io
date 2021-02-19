@@ -551,7 +551,7 @@ body {
                 -ms-transform: translateY(-50%);
                  -o-transform: translateY(-50%);
                     transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.2); }
+            background: rgba(0, 0, 0, 0.25); }
         .middle ul li a.loan .info h3 {
           margin: 0;
           font-weight: 600;
@@ -760,7 +760,7 @@ body {
               -ms-transform: translateY(-50%);
                -o-transform: translateY(-50%);
                   transform: translateY(-50%);
-          background: rgba(255, 255, 255, 0.1); }
+          background: rgba(0, 0, 0, 0.25); }
         @media screen and (max-width: 567px) {
           .middle .profile .loans article ul a.info.active-lending {
             grid-template-columns: 1fr 1fr 0.75fr; }
@@ -788,7 +788,7 @@ body {
               -ms-transform: translateY(-50%);
                -o-transform: translateY(-50%);
                   transform: translateY(-50%);
-          background: rgba(255, 255, 255, 0.1); }
+          background: rgba(0, 0, 0, 0.25); }
         @media screen and (max-width: 567px) {
           .middle .profile .loans article ul a.info.active-borrow {
             grid-template-columns: 1fr 1fr 0.75fr; }
