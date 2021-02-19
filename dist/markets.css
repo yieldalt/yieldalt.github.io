@@ -779,7 +779,7 @@ body {
         .middle .profile .loans article ul a.info.active-borrow > *:not(:first-child):not(.empty):after {
           content: '';
           display: block;
-          height: 85%;
+          height: 100%;
           width: 1px;
           position: absolute;
           left: -1rem;
