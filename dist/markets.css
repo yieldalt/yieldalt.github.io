@@ -725,6 +725,7 @@ body {
       -webkit-border-radius: 0.25rem;
          -moz-border-radius: 0.25rem;
               border-radius: 0.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.025);
       padding: 0.75rem 1rem;
       -webkit-transition: all 0.2s ease-out;
       -o-transition: all 0.2s ease-out;
@@ -750,7 +751,7 @@ body {
         .middle .profile .loans article ul a.info.active-lending > *:not(:first-child):not(.empty):after {
           content: '';
           display: block;
-          height: 85%;
+          height: 100%;
           width: 1px;
           position: absolute;
           left: -1rem;
