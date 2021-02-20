@@ -1646,8 +1646,7 @@ body {
         -webkit-border-radius: 50%;
            -moz-border-radius: 50%;
                 border-radius: 50%;
-        display: inline-block;
-        border: 1px solid rgba(255, 255, 255, 0.75); }
+        display: inline-block; }
       .assets ul li a.active {
         background: #eee;
         border-color: #eee;
