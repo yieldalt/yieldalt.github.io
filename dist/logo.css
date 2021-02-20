@@ -249,8 +249,8 @@ h1 {
     -webkit-border-radius: 50%;
        -moz-border-radius: 50%;
             border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -273,8 +273,8 @@ h1 {
     transition: all 0.2s ease-out; }
     .top a svg {
       fill: #efbc86;
-      width: 1.5rem;
-      height: 1.5rem; }
+      width: 2rem;
+      height: 2rem; }
     .top a:hover, .top a:focus {
       border-color: rgba(239, 188, 134, 0.5); }
 
@@ -496,7 +496,7 @@ h1 {
       border: 1px solid #fff;
       text-transform: uppercase;
       color: #fff;
-      font-weight: 500;
+      font-weight: 600;
       width: 100%;
       padding: 1.5rem 1rem;
       text-decoration: none;

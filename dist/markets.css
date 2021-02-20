@@ -391,7 +391,7 @@ body {
            -moz-border-radius: 0.25rem;
                 border-radius: 0.25rem;
         padding: 0.75rem 0.5rem;
-        min-width: 6rem;
+        min-width: 5.5rem;
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-box;
@@ -423,7 +423,8 @@ body {
             font-weight: 700;
             font-size: 1.25rem; }
             .middle ul li a.loan.lending-offer .reward span.amount:after {
-              content: ' YLD'; }
+              content: ' YLD';
+              font-variant: all-petite-caps; }
           .middle ul li a.loan.lending-offer .reward span.value {
             font-size: 0.875rem;
             opacity: 0.75;
@@ -481,7 +482,8 @@ body {
             margin-top: 0.25rem;
             font-weight: 700; }
       .middle ul li a.loan.borrow-request .reward p:not([class]):after {
-        content: ' YLD'; }
+        content: ' YLD';
+        font-variant: all-petite-caps; }
       @media screen and (max-width: 480px) {
         .middle ul li a.loan.borrow-request .reward {
           display: none; } }
@@ -490,10 +492,10 @@ body {
         -webkit-border-radius: 0.25rem;
            -moz-border-radius: 0.25rem;
                 border-radius: 0.25rem;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        width: -webkit-calc(100% - 5.5rem);
-        width: -moz-calc(100% - 5.5rem);
-        width: calc(100% - 5.5rem);
+        border: 1px solid rgba(255, 255, 255, 0.025);
+        width: -webkit-calc(100% - 5rem);
+        width: -moz-calc(100% - 5rem);
+        width: calc(100% - 5rem);
         padding: 0.75rem;
         padding-left: 1.75rem;
         -webkit-transition: all 0.2s ease-out;
@@ -551,7 +553,7 @@ body {
                 -ms-transform: translateY(-50%);
                  -o-transform: translateY(-50%);
                     transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.25); }
+            background: rgba(255, 255, 255, 0.025); }
         .middle ul li a.loan .info h3 {
           margin: 0;
           font-weight: 600;
@@ -563,7 +565,8 @@ body {
           line-height: 1rem;
           color: #efbc86; }
         .middle ul li a.loan .info p {
-          margin: 0; }
+          margin: 0;
+          line-height: 1.25rem; }
           .middle ul li a.loan .info p:not([class]) {
             color: #fff;
             font-weight: 600; }
@@ -572,7 +575,13 @@ body {
             font-weight: 600;
             color: #fff;
             opacity: 0.65;
-            line-height: 1rem; }
+            line-height: 1.125rem; }
+      .middle ul li a.loan .principal p:not([class]),
+      .middle ul li a.loan .collateral p:not([class]) {
+        font-variant: all-petite-caps; }
+        .middle ul li a.loan .principal p:not([class]) span,
+        .middle ul li a.loan .collateral p:not([class]) span {
+          font-variant: normal; }
       .middle ul li a.loan .interest p:not([class]):after {
         content: '%'; }
       .middle ul li a.loan .duration p:after {
@@ -691,7 +700,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
-    padding: 1.5rem 1rem; }
+    padding: 1.5rem 1rem 0 1rem; }
     .middle .profile .profile-balance h2 {
       margin-bottom: 1.125rem; }
     .middle .profile .profile-balance a.disconnect {
@@ -825,13 +834,17 @@ body {
             grid-template-columns: 1fr 1fr 0.75fr; }
             .middle .profile .loans article ul a.info.active-borrow .status {
               display: none; } }
+      .middle .profile .loans article ul a.info.defaulted {
+        grid-template-columns: 2.33fr 2.33fr 1.85fr 1fr; }
+      .middle .profile .loans article ul a.info.my {
+        grid-template-columns: 2.33fr 2.33fr 1fr 2fr; }
+        .middle .profile .loans article ul a.info.my .duration p:first-child {
+          margin-bottom: 0.35rem; }
       @media screen and (max-width: 567px) {
         .middle .profile .loans article ul a.info.repaid, .middle .profile .loans article ul a.info.defaulted, .middle .profile .loans article ul a.info.my {
           grid-template-columns: 1fr 1fr 0.75fr; }
           .middle .profile .loans article ul a.info.repaid .empty, .middle .profile .loans article ul a.info.defaulted .empty, .middle .profile .loans article ul a.info.my .empty {
             display: none; } }
-      .middle .profile .loans article ul a.info.my .duration p:first-child {
-        margin-bottom: 0.35rem; }
       .middle .profile .loans article ul a.info h3 {
         margin: 0;
         font-weight: 600;
@@ -1033,7 +1046,7 @@ body {
             -ms-flex-align: center;
                 align-items: center;
         grid-gap: 4rem;
-        padding: 1rem; }
+        padding: 1rem 0; }
         .middle .details .box > *.top-details.new {
           grid-gap: 1.5rem;
           grid-template-columns: 2.5fr 1fr; }
@@ -1403,6 +1416,22 @@ body {
           border-radius: 50%;
           background: #ddd;
           cursor: pointer; }
+    .middle .details .slider-wrapper .collateral.my {
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+         -moz-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-self: stretch; }
+      .middle .details .slider-wrapper .collateral.my h3 {
+        grid-column: 1;
+        grid-row: 1; }
+      .middle .details .slider-wrapper .collateral.my .amount,
+      .middle .details .slider-wrapper .collateral.my .dollars {
+        grid-column: 2;
+        text-align: right; }
     .middle .details .slider-wrapper .slider-details {
       grid-template-columns: 1fr 1fr 1fr;
       display: grid;
@@ -1511,8 +1540,17 @@ body {
        -moz-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline; }
+  .middle .details .waiting {
+    margin-top: 3rem; }
+    .middle .details .waiting p {
+      margin: 0;
+      text-align: center;
+      font-weight: 500;
+      font-size: 2rem;
+      opacity: 0.5; }
   .middle .lend-btn {
-    width: 100%; }
+    width: 100%;
+    padding: 1rem; }
     .middle .lend-btn a {
       display: block;
       background: #efbc86;
@@ -1586,7 +1624,7 @@ body {
               align-items: center;
       padding: 0.325rem 0.75rem 0.325rem 0.325rem;
       background: #1e1e1e;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.025);
       -webkit-border-radius: 2.75rem;
          -moz-border-radius: 2.75rem;
               border-radius: 2.75rem;
@@ -1665,7 +1703,7 @@ body {
               align-items: center;
       padding: 0.75rem 0.75rem;
       background: #1e1e1e;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.025);
       -webkit-border-radius: 2.75rem;
          -moz-border-radius: 2.75rem;
               border-radius: 2.75rem;
