@@ -14,95 +14,22 @@
 <body>
   <div class="wrapper">
     <div class="top">
-      <h1>Profile</h1>
-      <a class="history" href="profile-history.html"><span class="fas fa-history"></span></a>
+      <a class="back" href="profile.html"><span class="fas fa-arrow-left"></span></a>
+      <h1>History</h1>
     </div>
     <div class="middle">
       <h2 class="offScreen">My Profile Information</h2>
       <div class="profile content">
-
-        <div class="profile-balance">
-          <h2>Balance</h2>
-          <div class="value">
-            <div class="amount"><span class="number">1,125.8924</span> YLD</div>
-            <span class="dollars">$78,7501.39</span>
-          </div>
-          <a href="#" class="disconnect"><span>Disconnect Wallet</span></a>
-
-        </div>
-
         <div class="loans">
           <div>
             <article>
-              <h2>Lending</h2>
+              <h2>Past Loans</h2>
               <ul>
                 <li>
-                  <a href="user-lend.html" class="info active-lending">
-                    <div class="principal">
-                      <p><span class="number">40.55</span> LINK</p>
-                      <p class="dollars">$1284.10</p>
-                      <h3>Principal</h3>
-                    </div>
-                    <div class="interest">
-                      <p><span class="number">7.25%</span></p>
-                      <p class="dollars">$93.09</p>
-                      <h3>Interest</h3>
-                    </div>
-                    <div class="empty"></div>
-                    <div class="status active">active <span class="fas fa-angle-right"></span></div>
-                  </a>
-                </li>
-                <li>
-                  <a href="user-lend-defaulted.html" class="info defaulted">
+                  <a href="user-lend-defaulted.html" class="info defaulted past">
                     <div class="principal">
                       <p><span class="number">82,503.00</span> ENJ</p>
                       <p class="dollars">$4,523.68</p>
-                      <h3>Principal</h3>
-                    </div>
-                    <div class="interest">
-                      <p><span class="number">7.25%</span></p>
-                      <p class="dollars">$93.09</p>
-                      <h3>Interest</h3>
-                    </div>
-                    <div class="empty"></div>
-                    <div class="status defaulted">defaulted <span class="fas fa-angle-right"></span></div>
-                  </a>
-                </li>
-              </ul>
-            </article>
-
-            <article>
-              <h2>Borrowing</h2>
-              <ul>
-                <li>
-                  <a href="user-borrow.html" class="info active-borrow">
-                    <div class="principal">
-                      <p><span class="number">205.03</span> LINK</p>
-                      <p class="dollars">$4,920</p>
-                      <h3>Principal</h3>
-                    </div>
-                    <div class="liq-price">
-                      <p><span class="number">6,642.00</span> USDC</p>
-                      <!-- <p class="dollars">6,675</p> -->
-                      <p class="dollars">~146% ratio</p>
-                      <h3>Collateral</h3>
-                    </div>
-                    <div class="duration">
-                      <p class="due">03/01/2021</p>
-                      <p class="due"><span class="number">14 days left</p>
-                      <h3>Due Date</h3>
-                    </div>
-                    <!-- <div class="duration">
-                      <p>14</p>
-                    </div> -->
-                    <div class="status active">active <span class="fas fa-angle-right"></span></div>
-                  </a>
-                </li>
-                <li>
-                  <a href="user-borrow-defaulted.html" class="info defaulted">
-                    <div class="principal">
-                      <p><span class="number">266.00</span> AMPL</p>
-                      <p class="dollars">$257.95</p>
                       <h3>Principal</h3>
                     </div>
                     <div class="collateral">
@@ -112,23 +39,55 @@
                       <h3>Collateral</h3>
                     </div>
                     <div class="empty"></div>
-                    <div class="status defaulted">defaulted <span class="fas fa-angle-right"></span></div>
+                    <div class="status defaulted past">defaulted <span class="fas fa-angle-right"></span></div>
                   </a>
                 </li>
                 <li>
-                  <a href="user-borrow-repaid.html" class="info repaid">
+                  <a href="user-lend-defaulted.html" class="info seized past">
+                    <div class="principal">
+                      <p><span class="number">82,503.00</span> ENJ</p>
+                      <p class="dollars">$4,523.68</p>
+                      <h3>Principal</h3>
+                    </div>
+                    <div class="liq-price">
+                      <p><span class="number">6,642.00</span> USDC</p>
+                      <p class="dollars">6,675</p>
+                      <h3>Collateral</h3>
+                    </div>
+                    <div class="empty"></div>
+                    <div class="status seized past">seized <span class="fas fa-angle-right"></span></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="user-borrow-defaulted.html" class="info claimed past">
+                    <div class="principal">
+                      <p><span class="number">266.00</span> AMPL</p>
+                      <p class="dollars">$257.95</p>
+                      <h3>Principal</h3>
+                    </div>
+                    <div class="reward">
+                      <p><span class="number">1.27</span> YLD</p>
+                      <p class="dollars">$152.50</p>
+                      <h3>Reward</h3>
+                    </div>
+                    <div class="empty"></div>
+                    <div class="status claimed past">claimed <span class="fas fa-angle-right"></span></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="user-borrow-repaid.html" class="info repaid past">
                     <div class="principal">
                       <p><span class="number">0.1244</span> BTC</p>
                       <p class="dollars">$6,270.80</p>
                       <h3>Principal</h3>
                     </div>
-                    <div class="reward">
-                      <p><span class="number">1.27</span> YLD</p>
-                      <p class="dollars">41.5% available</p>
-                      <h3>Reward</h3>
+                    <div class="interest">
+                      <p><span class="number">7.25%</span></p>
+                      <p class="dollars">$483.39</p>
+                      <h3>Interest</h3>
                     </div>
                     <div class="empty"></div>
-                    <div class="status repaid">repaid <span class="fas fa-angle-right"></span></div>
+                    <div class="status repaid past">repaid <span class="fas fa-angle-right"></span></div>
                   </a>
                 </li>
               </ul>
@@ -139,10 +98,10 @@
 
           <div>
             <article>
-              <h2>My Lending Offers</h2>
+              <h2>Past Lending Offers</h2>
               <ul>
                 <li>
-                  <a href="user-lend-offer.html" class="info my">
+                  <a href="user-lend-offer.html" class="info claimed past">
                     <div class="principal">
                       <p><span class="number">40.55</span> LINK</p>
                       <p class="dollars">$1284.10</p>
@@ -154,11 +113,11 @@
                       <h3>Interest</h3>
                     </div>
                     <div class="empty"></div>
-                    <div class="status">for 3 days <span class="fas fa-angle-right"></span></div>
+                    <div class="status claimed past">taken <span class="fas fa-angle-right"></span></div>
                   </a>
                 </li>
                 <li>
-                  <a href="user-lend-offer.html" class="info my">
+                  <a href="user-lend-offer.html" class="info cancelled past">
                     <div class="principal">
                       <p><span class="number">4500.00</span> USDT</p>
                       <p class="dollars">$4523.68</p>
@@ -170,17 +129,17 @@
                       <h3>Interest</h3>
                     </div>
                     <div class="empty"></div>
-                    <div class="status">for 20 days <span class="fas fa-angle-right"></span></div>
+                    <div class="status cancelled past">cancelled <span class="fas fa-angle-right"></span></div>
                   </a>
                 </li>
               </ul>
             </article>
 
             <article>
-              <h2>My Borrow Requests</h2>
+              <h2>Past Borrow Requests</h2>
               <ul>
                 <li>
-                  <a href="user-borrow-request.html" class="info my">
+                  <a href="user-borrow-request.html" class="info claimed past">
                     <div class="principal">
                       <p><span class="number">266.00</span> AMPL</p>
                       <p class="dollars">$257.95</p>
@@ -192,11 +151,11 @@
                       <h3>Reward</h3>
                     </div>
                     <div class="empty"></div>
-                    <div class="status">for 5 days<span class="fas fa-angle-right"></span></div>
+                    <div class="status claimed past">funded <span class="fas fa-angle-right"></span></div>
                   </a>
                 </li>
                 <li>
-                  <a href="user-borrow-request.html" class="info my">
+                  <a href="user-borrow-request.html" class="info cancelled past">
                     <div class="principal">
                       <p><span class="number">0.1244</span> BTC</p>
                       <p class="dollars">$6,270.80</p>
@@ -208,7 +167,7 @@
                       <h3>Reward</h3>
                     </div>
                     <div class="empty"></div>
-                    <div class="status">for 12 days<span class="fas fa-angle-right"></span></div>
+                    <div class="status cancelled past">cancelled <span class="fas fa-angle-right"></span></div>
                   </a>
                 </li>
               </ul>

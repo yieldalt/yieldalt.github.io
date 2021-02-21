@@ -834,16 +834,18 @@ body {
             grid-template-columns: 1fr 1fr 0.75fr; }
             .middle .profile .loans article ul a.info.active-borrow .status {
               display: none; } }
-      .middle .profile .loans article ul a.info.defaulted {
+      .middle .profile .loans article ul a.info.defaulted, .middle .profile .loans article ul a.info.cancelled {
         grid-template-columns: 2.33fr 2.33fr 1.85fr 1fr; }
+      .middle .profile .loans article ul a.info.claimed {
+        grid-template-columns: 2.33fr 2.33fr 2.125fr 1fr; }
       .middle .profile .loans article ul a.info.my {
         grid-template-columns: 2.33fr 2.33fr 1fr 2fr; }
         .middle .profile .loans article ul a.info.my .duration p:first-child {
           margin-bottom: 0.35rem; }
       @media screen and (max-width: 567px) {
-        .middle .profile .loans article ul a.info.repaid, .middle .profile .loans article ul a.info.defaulted, .middle .profile .loans article ul a.info.my {
+        .middle .profile .loans article ul a.info.repaid, .middle .profile .loans article ul a.info.defaulted, .middle .profile .loans article ul a.info.claimed, .middle .profile .loans article ul a.info.seized, .middle .profile .loans article ul a.info.cancelled, .middle .profile .loans article ul a.info.my {
           grid-template-columns: 1fr 1fr 0.75fr; }
-          .middle .profile .loans article ul a.info.repaid .empty, .middle .profile .loans article ul a.info.defaulted .empty, .middle .profile .loans article ul a.info.my .empty {
+          .middle .profile .loans article ul a.info.repaid .empty, .middle .profile .loans article ul a.info.defaulted .empty, .middle .profile .loans article ul a.info.claimed .empty, .middle .profile .loans article ul a.info.seized .empty, .middle .profile .loans article ul a.info.cancelled .empty, .middle .profile .loans article ul a.info.my .empty {
             display: none; } }
       .middle .profile .loans article ul a.info h3 {
         margin: 0;
@@ -874,12 +876,14 @@ body {
       @media screen and (max-width: 567px) {
         .middle .profile .loans article ul a.info {
           border-right: 2px solid #efbc86; }
-          .middle .profile .loans article ul a.info.active, .middle .profile .loans article ul a.info.active-borrow, .middle .profile .loans article ul a.info.active-lending {
+          .middle .profile .loans article ul a.info.active, .middle .profile .loans article ul a.info.active-borrow, .middle .profile .loans article ul a.info.active-lending, .middle .profile .loans article ul a.info.claimed {
             border-right: 2px solid #59d379; }
-          .middle .profile .loans article ul a.info.repaid {
+          .middle .profile .loans article ul a.info.repaid, .middle .profile .loans article ul a.info.cancelled {
             border-right: 2px solid #efbc86; }
-          .middle .profile .loans article ul a.info.defaulted {
-            border-right: 2px solid #f84a4a; } }
+          .middle .profile .loans article ul a.info.defaulted, .middle .profile .loans article ul a.info.seized {
+            border-right: 2px solid #f84a4a; }
+          .middle .profile .loans article ul a.info.past {
+            border-right: 2px solid #efbc86; } }
       .middle .profile .loans article ul a.info > div {
         text-align: left;
         position: relative;
@@ -951,18 +955,22 @@ body {
             display: inline-block;
             margin: 0 0.325rem;
             line-height: 1.125rem; }
-          .middle .profile .loans article ul a.info > div.status.active, .middle .profile .loans article ul a.info > div.status.active-borrow, .middle .profile .loans article ul a.info > div.status.active-lending {
+          .middle .profile .loans article ul a.info > div.status.active, .middle .profile .loans article ul a.info > div.status.active-borrow, .middle .profile .loans article ul a.info > div.status.active-lending, .middle .profile .loans article ul a.info > div.status.claimed {
             color: #59d379; }
-            .middle .profile .loans article ul a.info > div.status.active span.fas, .middle .profile .loans article ul a.info > div.status.active-borrow span.fas, .middle .profile .loans article ul a.info > div.status.active-lending span.fas {
+            .middle .profile .loans article ul a.info > div.status.active span.fas, .middle .profile .loans article ul a.info > div.status.active-borrow span.fas, .middle .profile .loans article ul a.info > div.status.active-lending span.fas, .middle .profile .loans article ul a.info > div.status.claimed span.fas {
               color: #59d379; }
-          .middle .profile .loans article ul a.info > div.status.repaid {
+          .middle .profile .loans article ul a.info > div.status.repaid, .middle .profile .loans article ul a.info > div.status.cancelled {
             color: #efbc86; }
-            .middle .profile .loans article ul a.info > div.status.repaid span.fas {
+            .middle .profile .loans article ul a.info > div.status.repaid span.fas, .middle .profile .loans article ul a.info > div.status.cancelled span.fas {
               color: #efbc86; }
-          .middle .profile .loans article ul a.info > div.status.defaulted {
+          .middle .profile .loans article ul a.info > div.status.defaulted, .middle .profile .loans article ul a.info > div.status.seized {
             color: #f84a4a; }
-            .middle .profile .loans article ul a.info > div.status.defaulted span.fas {
+            .middle .profile .loans article ul a.info > div.status.defaulted span.fas, .middle .profile .loans article ul a.info > div.status.seized span.fas {
               color: #f84a4a; }
+          .middle .profile .loans article ul a.info > div.status.past {
+            color: #efbc86; }
+            .middle .profile .loans article ul a.info > div.status.past span.fas {
+              color: #efbc86; }
           .middle .profile .loans article ul a.info > div.status span.fas {
             display: inline-block;
             margin-left: 0.5rem;
@@ -974,7 +982,7 @@ body {
     display: block;
     margin: 0 0 0 auto;
     max-width: 100%;
-    max-height: 160px;
+    max-height: 10rem;
     font-size: 16px; }
     .middle .details .circular-chart .circle-bg {
       fill: none;
@@ -1541,17 +1549,17 @@ body {
         -ms-flex-align: baseline;
             align-items: baseline; }
   .middle .details .waiting {
-    margin-top: 3rem; }
+    margin-top: 2rem; }
     .middle .details .waiting p {
       margin: 0;
       text-align: center;
       font-weight: 500;
       font-size: 2rem;
       opacity: 0.5; }
-  .middle .lend-btn {
+  .middle .action-btns {
     width: 100%;
     padding: 1rem; }
-    .middle .lend-btn a {
+    .middle .action-btns a {
       display: block;
       background: #efbc86;
       color: #181b1e;
@@ -1564,6 +1572,29 @@ body {
               border-radius: 0.25rem;
       text-align: center;
       padding: 1rem 1rem; }
+      .middle .action-btns a:focus .modal {
+        display: block; }
+    .middle .action-btns .modal {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+         -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+           -o-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      max-width: 70%;
+      height: 200px;
+      background: #000;
+      display: none; }
+    .middle .action-btns.two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem; }
+      .middle .action-btns.two a:first-child {
+        background: none;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.5); }
 
 .assets {
   width: 100%;
