@@ -23,6 +23,18 @@ $('.assets ul a, .values ul a').click(function(e){
   //$this.parents('ul').prepend($this.parent());
 });
 
+$('.action-btns a:first-child').click(function(e){
+  e.preventDefault();
+  $(this).next().css('display','grid');
+  $(this).siblings('.overlay').toggle();
+});
+
+$('.action-btns .overlay').click(function(e){
+  e.preventDefault();
+  $(this).toggle();
+  $('.action-btns .modal').toggle();
+});
+
 // var assets = [];
 // $('.assets ul li').each(function(){
 //   assets.push($(this));
