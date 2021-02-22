@@ -15,7 +15,6 @@
     <div class="top">
       <a class="back" href="profile.html"><span class="fas fa-arrow-left"></span></a>
       <h1>Loan</h1>
-      <!-- <a class="share" href="#"><span class="fas fa-share-alt"></span></a> -->
     </div>
     <div class="middle lightBg">
       <h2 class="offScreen">Loan Information</h2>
@@ -67,16 +66,6 @@
               <span class="dollars">$18,742.50</span>
               <h3>Collateral</h3>
             </div>
-            <!-- <div class="collateral">
-              <span class="amount"><span class="number">0.3152</span> WBTC</span>
-              <span class="dollars">$18,742.50</span>
-              <div class="spacer"></div>
-              <h3>Collateral</h3>
-              <span class="amount"><span class="number">$43,460.41</span></span>
-              <h3>Liquidation Price</h3>
-              <span class="amount"><span class="number">$47,806.10</span></span>
-              <h3>Current Price</h3>
-            </div> -->
             <div class="collateral-details">
               <div class="liquidation-price">
                 <span class="amount"><span class="number">$43,460.41</span></span>
@@ -96,7 +85,60 @@
 
       </div>
       <div class="action-btns two">
-        <a href="#">Top Up</a>
+        <a href="#">Top Up
+          <div class="modal">
+            test
+          </div>
+        </a>
+        <div class="modal">
+          <div class="header">
+            <h2>Top Up Loan</h2>
+          </div>
+          <div class="body">
+            <div class="slider">
+              <div class="collateral">
+                <div class="heading">
+                  <h3>Collateral</h3>
+                </div>
+                <div class="asset-type">
+                  <span class="amount"><span class="number">0.62218</span> WBTC</span>
+                </div>
+                <div class="input-group">
+                  <input class="inputRange" type="range" step="0.01" min="0" max="1.5" value="0.52661"/>
+                </div>
+                <div class="slider-details">
+                  <div class="liquidation-price">
+                    <span class="amount"><span class="number">$43,460.41</span></span>
+                    <h3>Liq. Price (WBTC)</h3>
+                  </div>
+                  <div class="ratio">
+                    <span class="amount"><span class="number">155%</span></span>
+                    <h3>Ratio</h3>
+                  </div>
+                  <div class="current-price">
+                    <span class="amount"><span class="number">1.42559</span></span>
+                    <h3>Balance</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="discount-wrapper">
+                <div class="discount">
+                  <div class="heading">
+                    <h3>Discount</h3>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="toggle-switch round"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <a href="#">Submit</a>
+            </div>
+          </div>
+        </div>
+        <div class="overlay"></div>
         <a href="#">Repay</a>
       </div>
     </div>
