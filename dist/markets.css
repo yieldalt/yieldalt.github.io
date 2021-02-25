@@ -1694,23 +1694,39 @@ body {
               border: none;
               margin: 0;
               padding: 0 0.25rem 0 0; }
-        .middle .action-btns .modal .body .slider .collateral {
+        .middle .action-btns .modal .body .slider .collateral,
+        .middle .action-btns .modal .body .slider .principal,
+        .middle .action-btns .modal .body .slider .fee {
           display: grid;
           grid-column: 1 / 3;
           grid-gap: 1rem; }
+        .middle .action-btns .modal .body .slider .fee-wrapper {
+          grid-column: 1 / 3; }
+          .middle .action-btns .modal .body .slider .fee-wrapper .fee {
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1); }
         .middle .action-btns .modal .body .slider .asset-type {
+          display: grid;
           grid-column: 2;
-          justify-self: flex-end; }
+          justify-self: flex-end;
+          justify-items: flex-end; }
           .middle .action-btns .modal .body .slider .asset-type .amount {
             font-size: 1.25rem;
             font-weight: 600;
             font-variant: all-petite-caps; }
             .middle .action-btns .modal .body .slider .asset-type .amount .number {
               font-variant: normal; }
+          .middle .action-btns .modal .body .slider .asset-type .dollars {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #fff;
+            opacity: 0.65;
+            line-height: 1.125rem;
+            margin-top: 0.25rem; }
         .middle .action-btns .modal .body .slider .heading {
-          -webkit-align-self: flex-end;
-              -ms-flex-item-align: end;
-                  align-self: flex-end; }
+          -webkit-align-self: flex-start;
+              -ms-flex-item-align: start;
+                  align-self: flex-start; }
           .middle .action-btns .modal .body .slider .heading h3 {
             margin: 0;
             font-weight: 600;
@@ -1752,7 +1768,7 @@ body {
               @media screen and (min-width: 769px) {
                 .middle .action-btns .modal .body .slider .slider-details > * .amount {
                   line-height: 1.5rem; } }
-            .middle .action-btns .modal .body .slider .slider-details > *.collateral h3 {
+            .middle .action-btns .modal .body .slider .slider-details > *.collateral h3, .middle .action-btns .modal .body .slider .slider-details > *.principal h3, .middle .action-btns .modal .body .slider .slider-details > *.fee h3 {
               grid-row: 3 !important; }
             .middle .action-btns .modal .body .slider .slider-details > * .amount {
               font-size: 0.925rem; }
@@ -1800,6 +1816,11 @@ body {
         margin-top: 1rem; }
       .middle .action-btns .modal .btn {
         padding: 1rem; }
+        .middle .action-btns .modal .btn.check a {
+          background: #2b3136;
+          color: #efbc86; }
+        .middle .action-btns .modal .btn.check span.fas {
+          font-size: 1.25rem; }
       .middle .action-btns .modal + .overlay {
         content: '';
         position: absolute;
