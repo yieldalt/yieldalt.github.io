@@ -179,8 +179,9 @@ main .hero {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    grid-gap: 1rem;
     text-align: center; }
+    main .hero__textArea__btn-wrapper > *:first-child {
+      margin-right: 1rem; }
   main .hero__textArea__btn {
     color: #dcdcdc;
     font-weight: 500;
