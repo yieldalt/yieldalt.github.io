@@ -174,8 +174,11 @@ main .hero {
         line-height: 1.5rem;
         margin: 2rem 0; } }
   main .hero__textArea__btn-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
     grid-gap: 1rem;
     text-align: center; }
   main .hero__textArea__btn {
@@ -188,8 +191,7 @@ main .hero {
     -webkit-border-radius: 0.625rem;
        -moz-border-radius: 0.625rem;
             border-radius: 0.625rem;
-    text-transform: uppercase;
-    display: inline-block; }
+    text-transform: uppercase; }
     main .hero__textArea__btn--buy {
       display: none;
       color: #dcdcdc;
