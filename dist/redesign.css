@@ -48,7 +48,7 @@ body {
 
 #wrapper {
   max-width: 1200px;
-  padding: 1.5rem; }
+  padding: 2rem 1.25rem; }
 
 a {
   text-decoration: none; }
@@ -73,6 +73,13 @@ header .topNav {
      -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  @media screen and (max-width: 600px) {
+    header .topNav {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+         -moz-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
   header .topNav__list {
     display: -webkit-box;
     display: -webkit-flex;
@@ -88,6 +95,9 @@ header .topNav {
     color: #dcdcdc;
     text-decoration: none;
     padding: 0 1rem; }
+    @media screen and (max-width: 600px) {
+      header .topNav .topNav__list__item a {
+        padding: 0 0.75rem; } }
   header .topNav .topNav__list__item__logo img {
     width: 3rem; }
   @media screen and (max-width: 600px) {
@@ -105,9 +115,9 @@ header .topNav {
     padding: 0.625rem 1.5rem;
     border: 1px solid #efbc86;
     background: rgba(239, 188, 134, 0.1);
-    -webkit-border-radius: 0.325rem;
-       -moz-border-radius: 0.325rem;
-            border-radius: 0.325rem;
+    -webkit-border-radius: 0.25rem;
+       -moz-border-radius: 0.25rem;
+            border-radius: 0.25rem;
     text-transform: uppercase;
     display: inline-block; }
     @media screen and (max-width: 600px) {
@@ -127,7 +137,8 @@ main .hero {
   @media screen and (max-width: 600px) {
     main .hero {
       grid-template-columns: 1fr;
-      padding: 4rem 0 0 0; } }
+      grid-gap: 2rem;
+      padding: 2rem 0 0 0; } }
   main .hero__textArea__headings {
     display: grid;
     grid-template-columns: 1fr;
@@ -189,9 +200,9 @@ main .hero {
     padding: 1rem 2rem;
     border: 1px solid #efbc86;
     background: rgba(239, 188, 134, 0.1);
-    -webkit-border-radius: 0.625rem;
-       -moz-border-radius: 0.625rem;
-            border-radius: 0.625rem;
+    -webkit-border-radius: 0.3125rem;
+       -moz-border-radius: 0.3125rem;
+            border-radius: 0.3125rem;
     text-transform: uppercase; }
     main .hero__textArea__btn--buy {
       display: none;
@@ -201,9 +212,9 @@ main .hero {
       padding: 1rem 2rem;
       border: 1px solid #dcdcdc;
       background: rgba(220, 220, 220, 0.1);
-      -webkit-border-radius: 0.625rem;
-         -moz-border-radius: 0.625rem;
-              border-radius: 0.625rem;
+      -webkit-border-radius: 0.3125rem;
+         -moz-border-radius: 0.3125rem;
+              border-radius: 0.3125rem;
       text-transform: uppercase;
       display: inline-block; }
       @media screen and (max-width: 600px) {
@@ -212,11 +223,15 @@ main .hero {
     @media screen and (max-width: 600px) {
       main .hero__textArea__btn {
         font-size: 1rem; } }
-  @media screen and (max-width: 600px) {
-    main .hero__phone {
-      display: none; } }
   main .hero__phone img {
     max-width: 100%; }
+  @media screen and (max-width: 600px) {
+    main .hero__phone {
+      grid-row: 1; }
+      main .hero__phone img {
+        max-width: 65%;
+        display: block;
+        margin: 0 auto; } }
 
 main section.content {
   padding: 6rem 0; }
