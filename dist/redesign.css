@@ -327,6 +327,11 @@ main .rewards__text {
        text-align-last: center;
   max-width: 800px;
   margin: 0 auto; }
+  @media screen and (max-width: 767px) {
+    main .rewards__text {
+      text-align: left;
+      -moz-text-align-last: left;
+           text-align-last: left; } }
   main .rewards__text__heading {
     font-size: 2rem;
     font-weight: 500;
