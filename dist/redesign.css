@@ -73,7 +73,7 @@ h4, h5, h6, p {
             transform: translate(-50%, 0%) scale(1, 0.35); }
   .ribbons:after {
     content: '';
-    background-image: url("/img/curvey-prewarp.svg");
+    background-image: url("../img/curvey-prewarp.svg");
     position: absolute;
     height: 62vw;
     width: 100vw;
@@ -92,7 +92,7 @@ h4, h5, h6, p {
     z-index: -1; }
   .ribbons:before {
     content: '';
-    background-image: url("/img/curvey-prewarp.svg");
+    background-image: url("../img/curvey-prewarp.svg");
     position: absolute;
     height: 62vw;
     width: 100vw;
@@ -302,12 +302,10 @@ main .hero {
     main .hero__phone #svgIcon {
       fill: #efbc86;
       fill: url(#grad1);
-      -webkit-filter: url(#dropshadow);
-    filter: url(#dropshadow); }
+      -webkit-filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.75));
+              filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.75)); }
       @media screen and (max-width: 600px) {
         main .hero__phone #svgIcon {
-          -webkit-filter: none;
-          filter: none;
           width: 50%;
           height: auto;
           max-width: 200px; } }
@@ -359,7 +357,8 @@ main .features {
       grid-gap: 3rem; } }
   main .features__item svg {
     height: 4.5rem;
-    fill: #efbc86; }
+    fill: #efbc86;
+    display: none; }
     @media screen and (max-width: 600px) {
       main .features__item svg {
         height: 3.5rem;
