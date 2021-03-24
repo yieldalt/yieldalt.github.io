@@ -38,7 +38,7 @@ $(document).ready(function(){
         .to(startSvg, {morphSVG:"#zrx"}, "+=0.5")
 
         .to(startSvg, {morphSVG:"#yld"}, "+=0.5")
-        .repeat(1);
+        .repeat(25);
 
   //gsap.to("#ampl] {morphSVG:"#algo] duration: 1}).to("#algo", {morphSVG:"#ant", duration: 1});
   // .to("#ant", {duration: 1, morphSVG:"#bal"});
