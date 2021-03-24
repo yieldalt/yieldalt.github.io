@@ -73,7 +73,7 @@ h4, h5, h6, p {
             transform: translate(-50%, 0%) scale(1, 0.35); }
   .ribbons:after {
     content: '';
-    background-image: url("../img/curvey-prewarp.svg");
+    background-image: url("/img/curvey-prewarp.svg");
     position: absolute;
     height: 62vw;
     width: 100vw;
@@ -92,7 +92,7 @@ h4, h5, h6, p {
     z-index: -1; }
   .ribbons:before {
     content: '';
-    background-image: url("../img/curvey-prewarp.svg");
+    background-image: url("/img/curvey-prewarp.svg");
     position: absolute;
     height: 62vw;
     width: 100vw;
