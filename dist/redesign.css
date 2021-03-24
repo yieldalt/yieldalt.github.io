@@ -303,9 +303,11 @@ main .hero {
       fill: #efbc86;
       fill: url(#grad1);
       -webkit-filter: url(#dropshadow);
-              filter: url(#dropshadow); }
+    filter: url(#dropshadow); }
       @media screen and (max-width: 600px) {
         main .hero__phone #svgIcon {
+          -webkit-filter: none;
+          filter: none;
           width: 50%;
           height: auto;
           max-width: 200px; } }
