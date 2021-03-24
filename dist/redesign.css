@@ -57,6 +57,59 @@ h1, h2, h3,
 h4, h5, h6, p {
   margin: 0; }
 
+.ribbons {
+  position: relative; }
+  .ribbons.reverse:after {
+    -webkit-transform: translate(-50%, 0%) scale(-1, 0.4);
+       -moz-transform: translate(-50%, 0%) scale(-1, 0.4);
+        -ms-transform: translate(-50%, 0%) scale(-1, 0.4);
+         -o-transform: translate(-50%, 0%) scale(-1, 0.4);
+            transform: translate(-50%, 0%) scale(-1, 0.4); }
+  .ribbons.reverse:before {
+    -webkit-transform: translate(-50%, 0%) scale(1, 0.35);
+       -moz-transform: translate(-50%, 0%) scale(1, 0.35);
+        -ms-transform: translate(-50%, 0%) scale(1, 0.35);
+         -o-transform: translate(-50%, 0%) scale(1, 0.35);
+            transform: translate(-50%, 0%) scale(1, 0.35); }
+  .ribbons:after {
+    content: '';
+    background-image: url("../img/curvey-prewarp.svg");
+    position: absolute;
+    height: 62vw;
+    width: 100vw;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+            background-size: cover;
+    bottom: -25vw;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%) scale(1, 0.4);
+       -moz-transform: translate(-50%, 0%) scale(1, 0.4);
+        -ms-transform: translate(-50%, 0%) scale(1, 0.4);
+         -o-transform: translate(-50%, 0%) scale(1, 0.4);
+            transform: translate(-50%, 0%) scale(1, 0.4);
+    opacity: 0.65;
+    z-index: -1; }
+  .ribbons:before {
+    content: '';
+    background-image: url("../img/curvey-prewarp.svg");
+    position: absolute;
+    height: 62vw;
+    width: 100vw;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+            background-size: cover;
+    bottom: -26vw;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%) scale(-1, 0.35);
+       -moz-transform: translate(-50%, 0%) scale(-1, 0.35);
+        -ms-transform: translate(-50%, 0%) scale(-1, 0.35);
+         -o-transform: translate(-50%, 0%) scale(-1, 0.35);
+            transform: translate(-50%, 0%) scale(-1, 0.35);
+    opacity: 0.25;
+    z-index: -1; }
+
 header .topNav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -125,7 +178,7 @@ header .topNav {
         display: none; } }
 
 main .hero {
-  padding: 4rem 0;
+  padding: 6rem 0;
   display: grid;
   grid-template-columns: 3.5fr 2fr;
   grid-gap: 4rem;
@@ -133,7 +186,22 @@ main .hero {
   -webkit-align-items: center;
      -moz-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  position: relative; }
+  main .hero #curvey {
+    position: absolute;
+    height: 62vw;
+    width: 100vw;
+    bottom: -25vw;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%) scale(1, 0.4);
+       -moz-transform: translate(-50%, 0%) scale(1, 0.4);
+        -ms-transform: translate(-50%, 0%) scale(1, 0.4);
+         -o-transform: translate(-50%, 0%) scale(1, 0.4);
+            transform: translate(-50%, 0%) scale(1, 0.4);
+    opacity: 0.65;
+    z-index: -1;
+    fill: url(#curveyGrad); }
   @media screen and (max-width: 600px) {
     main .hero {
       grid-template-columns: 1fr;
@@ -151,6 +219,7 @@ main .hero {
       main .hero__textArea__headings {
         grid-template-columns: auto auto; } }
     main .hero__textArea__headings__h1 {
+      color: #fff;
       font-weight: 700;
       font-size: 4.5rem; }
       @media screen and (max-width: 600px) {
@@ -194,24 +263,24 @@ main .hero {
     main .hero__textArea__btn-wrapper > *:first-child {
       margin-right: 1rem; }
   main .hero__textArea__btn {
-    color: #dcdcdc;
+    color: #121212;
     font-weight: 500;
     font-size: 1.125rem;
     padding: 1rem 2rem;
     border: 1px solid #efbc86;
-    background: rgba(239, 188, 134, 0.1);
+    background: rgba(239, 188, 134, 0.95);
     -webkit-border-radius: 0.3125rem;
        -moz-border-radius: 0.3125rem;
             border-radius: 0.3125rem;
     text-transform: uppercase; }
     main .hero__textArea__btn--buy {
       display: none;
-      color: #dcdcdc;
+      color: #121212;
       font-weight: 500;
       font-size: 1.125rem;
       padding: 1rem 2rem;
       border: 1px solid #dcdcdc;
-      background: rgba(220, 220, 220, 0.1);
+      background: rgba(255, 255, 255, 0.95);
       -webkit-border-radius: 0.3125rem;
          -moz-border-radius: 0.3125rem;
               border-radius: 0.3125rem;
@@ -223,15 +292,39 @@ main .hero {
     @media screen and (max-width: 600px) {
       main .hero__textArea__btn {
         font-size: 1rem; } }
-  main .hero__phone img {
-    max-width: 100%; }
-  @media screen and (max-width: 600px) {
-    main .hero__phone {
-      grid-row: 1; }
-      main .hero__phone img {
-        max-width: 65%;
-        display: block;
-        margin: 0 auto; } }
+  main .hero__phone {
+    text-align: center; }
+    main .hero__phone #svgIcon {
+      fill: #efbc86;
+      fill: url(#grad1);
+      -webkit-filter: url(#dropshadow);
+              filter: url(#dropshadow); }
+    main .hero__phone .hidden {
+      visibility: hidden; }
+    main .hero__phone #slider {
+      max-width: 300px;
+      margin: 20px auto;
+      background: transparent;
+      height: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      display: none; }
+      main .hero__phone #slider span.ui-slider-handle {
+        -webkit-border-radius: 50%;
+           -moz-border-radius: 50%;
+                border-radius: 50%;
+        background: #efbc86;
+        border: none;
+        top: -0.5rem; }
+    main .hero__phone img {
+      max-width: 100%;
+      display: none; }
+    @media screen and (max-width: 600px) {
+      main .hero__phone {
+        grid-row: 1; }
+        main .hero__phone img {
+          max-width: 65%;
+          display: block;
+          margin: 0 auto; } }
 
 main section.content {
   padding: 6rem 0; }
@@ -253,11 +346,12 @@ main .features {
       grid-template-columns: 1fr;
       grid-gap: 3rem; } }
   main .features__item svg {
-    height: 5.5rem;
+    height: 4.5rem;
     fill: #efbc86; }
     @media screen and (max-width: 600px) {
       main .features__item svg {
-        height: 4rem; } }
+        height: 3.5rem;
+        display: none; } }
   main .features__item__name {
     color: #efbc86;
     font-size: 1.5rem;
