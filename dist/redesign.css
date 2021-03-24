@@ -188,6 +188,11 @@ main .hero {
       -ms-flex-align: center;
           align-items: center;
   position: relative; }
+  @media screen and (max-width: 600px) {
+    main .hero:before {
+      top: 60px; }
+    main .hero:after {
+      top: 40px; } }
   main .hero #curvey {
     position: absolute;
     height: 62vw;
@@ -206,7 +211,7 @@ main .hero {
     main .hero {
       grid-template-columns: 1fr;
       grid-gap: 2rem;
-      padding: 2rem 0 0 0; } }
+      padding: 3rem 0 0 0; } }
   main .hero__textArea__headings {
     display: grid;
     grid-template-columns: 1fr;
@@ -299,6 +304,11 @@ main .hero {
       fill: url(#grad1);
       -webkit-filter: url(#dropshadow);
               filter: url(#dropshadow); }
+      @media screen and (max-width: 600px) {
+        main .hero__phone #svgIcon {
+          width: 50%;
+          height: auto;
+          max-width: 200px; } }
     main .hero__phone .hidden {
       visibility: hidden; }
     main .hero__phone #slider {
