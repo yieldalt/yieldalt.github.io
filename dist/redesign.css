@@ -419,7 +419,7 @@ main section.content {
     padding: 2rem 0; }
   @media screen and (max-width: 767px) {
     main section.content {
-      padding: 5rem 0; } }
+      padding: 6rem 0; } }
 
 main .features {
   display: grid;
@@ -508,7 +508,7 @@ main .individualized {
       -ms-flex-align: center;
           align-items: center;
   grid-gap: 3rem; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 960px) {
     main .individualized {
       grid-template-columns: 1fr;
       row-gap: 3rem;
@@ -521,7 +521,7 @@ main .individualized {
     color: #efbc86;
     grid-column: 1 / 2 span;
     text-align: center; }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 960px) {
       main .individualized__heading {
         grid-column: auto;
         grid-row: 1; } }
@@ -551,6 +551,10 @@ main .individualized {
     @media screen and (max-width: 767px) {
       main .individualized__graph {
         grid-row: 3; } }
+    main .individualized__graph__graphicA {
+      max-width: 575px;
+      width: 100%;
+      margin: 0 auto; }
     main .individualized__graph__name {
       font-weight: 500; }
     main .individualized__graph__legend {
@@ -595,7 +599,7 @@ main .rewards {
       -ms-flex-align: center;
           align-items: center;
   grid-gap: 3rem; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 960px) {
     main .rewards {
       grid-template-columns: 1fr;
       row-gap: 3rem;
@@ -608,7 +612,7 @@ main .rewards {
     color: #efbc86;
     grid-column: 1 / 2 span;
     text-align: center; }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 960px) {
       main .rewards__heading {
         grid-column: auto; } }
   main .rewards__text {
@@ -618,9 +622,6 @@ main .rewards {
     justify-items: center;
     max-width: 800px;
     margin: 0 auto; }
-    main .rewards__text__graphicA {
-      max-width: 640px;
-      width: 100%; }
     main .rewards__text__body {
       line-height: 1.75rem;
       font-size: 1.125rem;
@@ -633,7 +634,7 @@ main .rewards {
     grid-row-gap: 1rem; }
     main .rewards__chart svg, main .rewards__chart img {
       max-width: 100%;
-      width: 550px;
+      width: 500px;
       margin: 0 auto; }
     main .rewards__chart__rate__slider {
       display: grid;
