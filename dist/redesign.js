@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
 // interactivity
-$('.rewards__text__chart__rate__slider__inputs__range input').on('input',function(){
+$('.rewards__chart__rate__slider__inputs__range input').on('input',function(){
   var dollars = $(this).val();
-  $('.rewards__text__chart__rate__slider__inputs__text input').val('$' + dollars);
+  $('.rewards__chart__rate__slider__inputs__text output').text('$' + dollars);
 
   var yld = Math.round((3.5 / (dollars / 100)) * 100) / 100;
   $('.yieldAmount').text(yld);

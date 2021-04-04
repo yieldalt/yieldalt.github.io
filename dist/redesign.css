@@ -415,14 +415,16 @@ main section.content {
   padding: 6rem 0; }
   main section.content.less-padding {
     padding: 4rem 0; }
+  main section.content.empty {
+    padding: 2rem 0; }
   @media screen and (max-width: 767px) {
     main section.content {
-      padding: 3rem 0; } }
+      padding: 5rem 0; } }
 
 main .features {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2rem;
+  grid-gap: 3rem;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
      -moz-box-align: start;
@@ -447,21 +449,18 @@ main .features {
     color: #efbc86;
     font-size: 1.5rem;
     font-weight: 500;
-    margin: 1.5rem 0; }
+    margin: 0 0 1.5rem; }
   main .features__item__description {
-    line-height: 1.5rem; }
+    line-height: 1.75rem;
+    font-size: 1.125rem; }
     main .features__item__description a {
       color: #efbc86;
       display: inline-block;
       margin-top: 0.5rem;
       position: relative; }
       main .features__item__description a i {
+        display: inline;
         position: relative;
-        -webkit-transform: translateY(1px);
-           -moz-transform: translateY(1px);
-            -ms-transform: translateY(1px);
-             -o-transform: translateY(1px);
-                transform: translateY(1px);
         color: rgba(239, 188, 134, 0.75);
         -webkit-transition: all 0.2s ease-out;
         -o-transition: all 0.2s ease-out;
@@ -502,8 +501,13 @@ main .features {
 
 main .individualized {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 4rem; }
+  grid-template-columns: 1.25fr 1fr;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 3rem; }
   @media screen and (max-width: 767px) {
     main .individualized {
       grid-template-columns: 1fr;
@@ -522,7 +526,8 @@ main .individualized {
         grid-column: auto;
         grid-row: 1; } }
   main .individualized__text p {
-    line-height: 1.5rem; }
+    line-height: 1.75rem;
+    font-size: 1.125rem; }
     main .individualized__text p:first-child {
       margin-bottom: 1.5rem; }
   @media screen and (max-width: 767px) {
@@ -583,8 +588,29 @@ main .individualized {
 
 main .rewards {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 4rem; }
+  grid-template-columns: 1.25fr 1fr;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 3rem; }
+  @media screen and (max-width: 767px) {
+    main .rewards {
+      grid-template-columns: 1fr;
+      row-gap: 3rem;
+      -webkit-column-gap: 0;
+         -moz-column-gap: 0;
+              column-gap: 0; } }
+  main .rewards__heading {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #efbc86;
+    grid-column: 1 / 2 span;
+    text-align: center; }
+    @media screen and (max-width: 767px) {
+      main .rewards__heading {
+        grid-column: auto; } }
   main .rewards__text {
     display: grid;
     grid-template-columns: 1fr;
@@ -592,145 +618,117 @@ main .rewards {
     justify-items: center;
     max-width: 800px;
     margin: 0 auto; }
-    @media screen and (max-width: 767px) {
-      main .rewards__text {
-        text-align: left;
-        -moz-text-align-last: left;
-             text-align-last: left; } }
     main .rewards__text__graphicA {
       max-width: 640px;
       width: 100%; }
-    main .rewards__text__heading {
-      font-size: 2rem;
-      font-weight: 500;
-      color: #efbc86; }
     main .rewards__text__body {
-      line-height: 1.5rem;
-      text-align: justify;
-      -moz-text-align-last: center;
-           text-align-last: center; }
-    main .rewards__text__chart {
+      line-height: 1.75rem;
+      font-size: 1.125rem;
+      text-align: left; }
+      @media screen and (max-width: 767px) {
+        main .rewards__text__body {
+          text-align: left; } }
+  main .rewards__chart {
+    display: grid;
+    grid-row-gap: 1rem; }
+    main .rewards__chart svg, main .rewards__chart img {
+      max-width: 100%;
+      width: 550px;
+      margin: 0 auto; }
+    main .rewards__chart__rate__slider {
       display: grid;
-      grid-row-gap: 1rem;
-      margin: 2rem 0; }
-      main .rewards__text__chart svg, main .rewards__text__chart img {
-        max-width: 100%;
-        width: 500px;
+      grid-template-columns: 1fr;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      main .rewards__chart__rate__slider__inputs {
+        max-width: 480px;
+        width: 100%;
         margin: 0 auto; }
-      main .rewards__text__chart__rate__slider {
-        display: grid;
-        grid-template-columns: 1fr;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-           -moz-box-align: center;
-            -ms-flex-align: center;
-                align-items: center; }
-        main .rewards__text__chart__rate__slider__heading {
-          justify-self: flex-start; }
-          main .rewards__text__chart__rate__slider__heading h3 {
+        main .rewards__chart__rate__slider__inputs__text {
+          display: grid;
+          grid-template-columns: auto auto;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+             -moz-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between; }
+          main .rewards__chart__rate__slider__inputs__text output {
+            background: none;
+            border: 0;
+            padding: 0;
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: #fff;
+            width: 100%; }
+          main .rewards__chart__rate__slider__inputs__text label {
             color: #efbc86;
             font-weight: 600;
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             text-indent: 1px;
-            text-transform: uppercase; }
-        main .rewards__text__chart__rate__slider__inputs {
-          max-width: 480px;
-          width: 100%;
-          margin: 0 auto; }
-          main .rewards__text__chart__rate__slider__inputs__text {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            -webkit-box-pack: center;
-            -webkit-justify-content: center;
-               -moz-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
-            text-align: center; }
-            main .rewards__text__chart__rate__slider__inputs__text input {
-              background: none;
-              border: 0;
-              padding: 0;
-              font-weight: 700;
-              font-size: 1.5rem;
-              color: #fff;
-              width: 100%;
-              text-align: right; }
-            main .rewards__text__chart__rate__slider__inputs__text label {
-              color: #efbc86;
-              font-weight: 600;
-              font-size: 1.125rem;
-              text-indent: 1px;
-              text-transform: uppercase;
-              margin-top: 0.25rem;
-              text-align: left; }
-          main .rewards__text__chart__rate__slider__inputs__range {
-            padding: 0.5rem 0;
-            margin-top: 0.5rem;
-            /* Special styling for WebKit/Blink */
-            /* All the same stuff for Firefox */
-            /* All the same stuff for IE */ }
-            main .rewards__text__chart__rate__slider__inputs__range input[type=range]::-webkit-slider-thumb {
-              border: 1px solid #000000;
-              height: 24px;
-              width: 24px;
-              -webkit-border-radius: 50%;
-                      border-radius: 50%;
-              background: #fff;
-              cursor: pointer;
-              margin-top: -10px;
-              /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */ }
-            main .rewards__text__chart__rate__slider__inputs__range input[type=range]::-moz-range-thumb {
-              border: 1px solid #000000;
-              height: 24px;
-              width: 24px;
-              -moz-border-radius: 50%;
-                   border-radius: 50%;
-              background: #fff; }
-            main .rewards__text__chart__rate__slider__inputs__range input[type=range]::-ms-thumb {
-              border: 1px solid #000000;
-              height: 24px;
-              width: 24px;
-              border-radius: 50%;
-              background: #fff; }
-            main .rewards__text__chart__rate__slider__inputs__range input[type=range]::-webkit-slider-runnable-track {
-              width: 100%;
-              height: 4px;
-              cursor: pointer;
-              -webkit-box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-                      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-              background: #efbc86;
-              -webkit-border-radius: 2px;
-                      border-radius: 2px;
-              border: none; }
-            main .rewards__text__chart__rate__slider__inputs__range input[type=range]:focus::-webkit-slider-runnable-track {
-              background: #efbc86; }
-            main .rewards__text__chart__rate__slider__inputs__range input[type=range]::-moz-range-track {
-              width: 100%;
-              height: 4px;
-              cursor: pointer;
-              -moz-box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-                   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-              background: #efbc86;
-              -moz-border-radius: 2px;
-                   border-radius: 2px;
-              border: none; }
-            main .rewards__text__chart__rate__slider__inputs__range input[type=range]::-ms-track {
-              width: 100%;
-              height: 4px;
-              cursor: pointer;
-              background: transparent;
-              border-color: transparent;
-              border-width: 16px 0;
-              color: transparent; }
-  main .rewards__chart {
-    text-align: center; }
-    main .rewards__chart__heading {
-      font-size: 2rem;
-      font-weight: 500;
-      color: #efbc86; }
-    main .rewards__chart svg {
-      max-width: 640px;
-      width: 100%; }
+            text-transform: uppercase;
+            margin-top: 0.25rem; }
+        main .rewards__chart__rate__slider__inputs__range {
+          padding: 0.5rem 0;
+          margin-top: 0.5rem;
+          /* Special styling for WebKit/Blink */
+          /* All the same stuff for Firefox */
+          /* All the same stuff for IE */ }
+          main .rewards__chart__rate__slider__inputs__range input[type=range]::-webkit-slider-thumb {
+            border: 1px solid #000000;
+            height: 24px;
+            width: 24px;
+            -webkit-border-radius: 50%;
+                    border-radius: 50%;
+            background: #fff;
+            cursor: pointer;
+            margin-top: -10px;
+            /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */ }
+          main .rewards__chart__rate__slider__inputs__range input[type=range]::-moz-range-thumb {
+            border: 1px solid #000000;
+            height: 24px;
+            width: 24px;
+            -moz-border-radius: 50%;
+                 border-radius: 50%;
+            background: #fff; }
+          main .rewards__chart__rate__slider__inputs__range input[type=range]::-ms-thumb {
+            border: 1px solid #000000;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #fff; }
+          main .rewards__chart__rate__slider__inputs__range input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            -webkit-box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+                    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+            background: #efbc86;
+            -webkit-border-radius: 2px;
+                    border-radius: 2px;
+            border: none; }
+          main .rewards__chart__rate__slider__inputs__range input[type=range]:focus::-webkit-slider-runnable-track {
+            background: #efbc86; }
+          main .rewards__chart__rate__slider__inputs__range input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            -moz-box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+                 box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+            background: #efbc86;
+            -moz-border-radius: 2px;
+                 border-radius: 2px;
+            border: none; }
+          main .rewards__chart__rate__slider__inputs__range input[type=range]::-ms-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            border-width: 16px 0;
+            color: transparent; }
 
 main .roadmap {
   display: grid;
@@ -743,11 +741,12 @@ main .roadmap {
     font-weight: 500;
     color: #efbc86;
     grid-column: 1 / 2 span;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 2rem; }
   main .roadmap picture {
-    max-width: 75%; }
+    max-width: 100%; }
   main .roadmap img {
-    width: 320px;
+    width: 300px;
     max-width: 100%; }
     @media screen and (min-width: 767px) {
       main .roadmap img {
