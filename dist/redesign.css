@@ -501,7 +501,7 @@ main .features {
 
 main .individualized {
   display: grid;
-  grid-template-columns: 1.25fr 1fr;
+  grid-template-columns: 1fr 1fr;
   -webkit-box-align: center;
   -webkit-align-items: center;
      -moz-box-align: center;
@@ -592,7 +592,7 @@ main .individualized {
 
 main .rewards {
   display: grid;
-  grid-template-columns: 1.25fr 1fr;
+  grid-template-columns: 1fr 1fr;
   -webkit-box-align: center;
   -webkit-align-items: center;
      -moz-box-align: center;
