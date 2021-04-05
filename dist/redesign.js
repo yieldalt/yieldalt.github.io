@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+// scrollTrigger
+$('a[href="#roadmap"]').click(function(e){
+  e.preventDefault();
+  gsap.to(window, {duration: 0.75, scrollTo:"#roadmap"});
+});
+
 // interactivity
 $('.rewards__chart__rate__slider__inputs__range input').on('input',function(){
   var dollars = $(this).val();

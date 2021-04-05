@@ -31,19 +31,19 @@
   <header>
     <nav class="topNav">
       <ul class="topNav__list reset">
-        <li class="topNav__list__item"><a href="/" class="topNav__list__item__logo" title="Home"><img src="../img/yield-logo-line.svg" alt="Yield logo"></a></li>
-        <li class="topNav__list__item"><a href="https://yield-credit.gibook.io/">Docs</a></li>
+        <li class="topNav__list__item"><a href="javascript: return false;" class="topNav__list__item__logo" title="Home"><img src="../img/yield-logo-line.svg" alt="Yield logo"></a></li>
+        <li class="topNav__list__item"><a href="https://yield-credit.gibook.io/" target="_blank">Docs</a></li>
         <li class="topNav__list__item"><a href="#roadmap">Roadmap</a></li>
-        <li class="topNav__list__item"><a href="#">Community</a></li>
-        <li class="topNav__list__item"><a href="https://garden.yield.credit/">The Garden</a></li>
-        <li class="topNav__list__item topNav__list__item--buy"><a href="https://app.sushi.com/pair/0xbbfd9b37ec6ea1ca612ab4adef6d8c6ece1a4134">Buy YLD</a></li>
+        <li class="topNav__list__item"><a href="https://t.me/yieldchat" target="_blank">Community</a></li>
+        <li class="topNav__list__item"><a href="https://garden.yield.credit/" target="_blank">The Garden</a></li>
+        <li class="topNav__list__item topNav__list__item--buy"><a href="https://app.sushi.com/pair/0xbbfd9b37ec6ea1ca612ab4adef6d8c6ece1a4134" target="_blank">Buy YLD</a></li>
       </ul>
       <ul class="topNav__right reset">
         <li class="topNav__right__item">
-          <a class="topNav__right__item__social fab fa-twitter" href="https://twitter.com/YieldCredit"><span class="offScreen">Twitter @YieldCredit</span></a>
+          <a class="topNav__right__item__social fab fa-twitter" href="https://twitter.com/YieldCredit" target="_blank"><span class="offScreen">Twitter @YieldCredit</span></a>
         </li>
         <li class="topNav__right__item">
-          <a class="topNav__right__item__btn" href="https://app.yield.credit/">Launch App</a>
+          <a class="topNav__right__item__btn" href="https://app.yield.credit/" target="_blank">Launch App</a>
         </li>
       </ul>
     </nav>
@@ -701,6 +701,9 @@
           <h3 class="borrowing__step__heading"><span class="borrowing__step__heading__number">4</span> Earn YLD</h3>
           <p class="borrowing__step__body">After repayment and a short waiting period, you will be able to claim your full YLD reward.</p>
         </div>
+        <div class="borrowing__cta">
+          <a href="https://yield-credit.gitbook.io/docs/faq/borrowing" class="borrowing__cta__btn" target="_blank">Learn more <span class="offScreen">about borrowing on Yield</span></a>
+        </div>
       </div>
     </section>
     <!-- <section class="content">
@@ -1068,7 +1071,7 @@
         </div>
       </div>
     </section>
-    <section class="content">
+    <section class="content" id="roadmap">
       <div class="roadmap">
         <h2 class="roadmap__heading">Yield Short-term Roadmap</h2>
         <picture>
@@ -1122,6 +1125,8 @@
 <script src="../dist/svgMorph.js"></script> -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<script src="../dist/ScrollTrigger.min.js"></script>
+<script src="../dist/ScrollToPlugin.min.js"></script>
 <script src="../dist/MorphSVGPlugin.min.js"></script>
 <script src="../dist/TextPlugin.min.js"></script>
 

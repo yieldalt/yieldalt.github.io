@@ -43,6 +43,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 3rem;
+  overflow-x: hidden;
   font-weight: 400;
   font-family: "Inter", sans-serif;
   color: #dcdcdc; }
@@ -218,7 +219,8 @@ header .topNav {
   header .topNav .topNav__list__item a {
     color: #dcdcdc;
     text-decoration: none;
-    padding: 0 1rem; }
+    padding: 0 1rem;
+    font-weight: 500; }
     @media screen and (max-width: 600px) {
       header .topNav .topNav__list__item a {
         padding: 0 0.75rem; } }
@@ -238,6 +240,9 @@ header .topNav {
     color: #efbc86;
     font-size: 2rem;
     display: inline-block; }
+    @media screen and (max-width: 600px) {
+      header .topNav .topNav__right__item__social {
+        font-size: 1.5rem; } }
   header .topNav .topNav__right__item__btn {
     color: #dcdcdc;
     font-weight: 500;
@@ -249,7 +254,15 @@ header .topNav {
        -moz-border-radius: 0.25rem;
             border-radius: 0.25rem;
     text-transform: uppercase;
-    display: inline-block; }
+    display: inline-block;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
+    header .topNav .topNav__right__item__btn:hover, header .topNav .topNav__right__item__btn:focus {
+      border: 1px solid rgba(239, 188, 134, 0.95);
+      background: rgba(239, 188, 134, 0.95);
+      color: #121212; }
     @media screen and (max-width: 600px) {
       header .topNav .topNav__right__item__btn {
         display: none; } }
@@ -471,7 +484,34 @@ main .borrowing {
       text-align: center;
       margin-right: 0.75rem; }
   main .borrowing__step__body {
-    font-size: 1.125rem; }
+    font-size: 1.125rem;
+    line-height: 1.75rem; }
+  main .borrowing__cta {
+    grid-column: 1 / 2 span;
+    text-align: center; }
+    @media screen and (max-width: 960px) {
+      main .borrowing__cta {
+        grid-column: auto; } }
+    main .borrowing__cta__btn {
+      color: #dcdcdc;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.625rem 1.5rem;
+      border: 1px solid #efbc86;
+      background: rgba(239, 188, 134, 0.1);
+      -webkit-border-radius: 0.25rem;
+         -moz-border-radius: 0.25rem;
+              border-radius: 0.25rem;
+      text-transform: uppercase;
+      display: inline-block;
+      -webkit-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out; }
+      main .borrowing__cta__btn:hover, main .borrowing__cta__btn:focus {
+        border: 1px solid rgba(239, 188, 134, 0.95);
+        background: rgba(239, 188, 134, 0.95);
+        color: #121212; }
 
 main .features {
   display: grid;
