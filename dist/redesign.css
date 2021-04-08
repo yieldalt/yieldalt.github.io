@@ -517,6 +517,21 @@ main .stats {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 3rem; }
+  @media screen and (max-width: 767px) {
+    main .stats {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 3rem;
+      -webkit-column-gap: 3rem;
+         -moz-column-gap: 3rem;
+              column-gap: 3rem;
+      justify-items: center; } }
+  @media screen and (max-width: 480px) {
+    main .stats {
+      grid-template-columns: 1fr;
+      -webkit-column-gap: 0;
+         -moz-column-gap: 0;
+              column-gap: 0;
+      justify-items: center; } }
   main .stats__box {
     border: 1px solid #efbc86;
     background: rgba(239, 188, 134, 0.08);
@@ -541,7 +556,8 @@ main .stats {
     -webkit-justify-content: center;
        -moz-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    width: 100%; }
     main .stats__box__heading {
       color: #efbc86;
       font-weight: 600;
