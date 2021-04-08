@@ -453,6 +453,10 @@ main .howTo {
     text-align: center; }
     @media screen and (max-width: 960px) {
       main .howTo__heading {
+        grid-column: 1 / 2 span;
+        grid-row: 1; } }
+    @media screen and (max-width: 767px) {
+      main .howTo__heading {
         grid-column: auto;
         grid-row: 1; } }
   main .howTo__borrow, main .howTo__lend {
