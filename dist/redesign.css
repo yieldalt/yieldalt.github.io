@@ -520,9 +520,9 @@ main .stats {
   main .stats__box {
     border: 1px solid #efbc86;
     background: rgba(239, 188, 134, 0.08);
-    -webkit-border-radius: 0.7rem;
-       -moz-border-radius: 0.7rem;
-            border-radius: 0.7rem;
+    -webkit-border-radius: 0.5rem;
+       -moz-border-radius: 0.5rem;
+            border-radius: 0.5rem;
     padding: 1.5rem;
     text-align: center;
     display: -webkit-box;
