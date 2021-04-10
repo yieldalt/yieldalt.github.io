@@ -32,7 +32,7 @@
     <nav class="topNav">
       <ul class="topNav__list reset">
         <li class="topNav__list__item"><a href="javascript: return false;" class="topNav__list__item__logo" title="Home"><img src="../img/yield-logo-line.svg" alt="Yield logo"></a></li>
-        <li class="topNav__list__item"><a href="https://yield-credit.gibook.io/" target="_blank">Docs</a></li>
+        <li class="topNav__list__item"><a href="https://yield-credit.gitbook.io/" target="_blank">Docs</a></li>
         <li class="topNav__list__item"><a href="#roadmap">Roadmap</a></li>
         <li class="topNav__list__item"><a href="https://t.me/yieldchat" target="_blank">Community</a></li>
         <li class="topNav__list__item"><a href="https://garden.yield.credit/" target="_blank">The Garden</a></li>
@@ -1130,6 +1130,22 @@
         </picture>
       </div>
     </section>
+    <section class="content">
+      <div class="faqs">
+        <h2 class="faqs__heading">Frequently Asked Questions</h2>
+        <dl class="faqs__list reset">
+          <dt><a href="#" class="faqs__list__question"><span class="faqs__list__question__plus"><span class="line"></span><span class="line"></span></span><h3 class="faqs__list__item__toggle__heading">What is the YLD token?</h3></a></dt>
+          <dd class="faqs__list__answer">Yield (YLD) is a standard ERC20 token with minting and burning functionality. Borrowers can earn YLD with every loan they repay on time. Lenders and borrowers that stake 50 YLD receive discounts on platform fees, lower loan liquidation ratios, and higher YLD rewards. All fees on the platform are used to buyback YLD from the open market and burn it.</dd>
+          <dt><a href="#" class="faqs__list__question"><span class="faqs__list__question__plus"><span class="line"></span><span class="line"></span></span><h3 class="faqs__list__item__toggle__heading">What stops borrowers from instantly selling their earned YLD onto the market?</h3></a></dt>
+          <dd class="faqs__list__answer">Nothing. However, as the earned amount tracks the principal and interest of the loan, smart borrowers would seek to sell what they've earned for more than they've spent on fees.</dd>
+          <dt><a href="#" class="faqs__list__question"><span class="faqs__list__question__plus"><span class="line"></span><span class="line"></span></span><h3 class="faqs__list__item__toggle__heading">How are the rates fixed?</h3></a></dt>
+          <dd class="faqs__list__answer">Most DeFi lending apps use a pooled model where lenders and borrowers deposit funds into a giant pool. The rate is then some function of how much the pool is utilized which changes as people enter and leave. <br><br>There are no pools in Yield. Each loan stands on its own, individualized to the lender/borrower in that specific loan contract. No other entity in the system is relevant when determining a loan's rates. The rates are fixed when the loan is created.</dd>
+          <dt><a href="#" class="faqs__list__question"><span class="faqs__list__question__plus"><span class="line"></span><span class="line"></span></span><h3 class="faqs__list__item__toggle__heading">How much YLD will I earn from repaying my loans?</h3></a></dt>
+          <dd class="faqs__list__answer">The amount of YLD you can earn from repaying your loan is proportional to the principal requested and interest to be paid. It increases as either or both increase. This increase continues up to a cap which is paid in YLD and roughly equal to 4% of the loan's interest. The maximum YLD reward adjusts as the price of YLD changes.</dd>
+        </dl>
+        <a href="https://yield-credit.gitbook.io/docs" class="faqs__btn">Read more FAQs</a>
+      </div>
+    </section>
     <section class="content empty">
       <div class="ribbons fade parallax">
         <div class="ribbon1"></div>
@@ -1154,13 +1170,16 @@
       <div class="rights__social">
         <ul class="rights__social__list reset">
           <li class="rights__social__list__item">
-            <a href="https://twitter.com/YieldCredit" class="fab fa-twitter"></a>
+            <a href="https://twitter.com/YieldCredit" class="fab fa-twitter" target="_blank"></a>
           </li>
           <li class="rights__social__list__item">
-            <a href="https://twitter.com/YieldCredit" class="fab fa-medium"></a>
+            <a href="https://twitter.com/YieldCredit" class="fab fa-medium" target="_blank"></a>
           </li>
           <li class="rights__social__list__item">
-            <a href="https://twitter.com/YieldCredit" class="fab fa-reddit"></a>
+            <a href="https://twitter.com/YieldCredit" class="fab fa-reddit" target="_blank"></a>
+          </li>
+          <li class="rights__social__list__item">
+            <a href="https://defipulse.com/" target="_blank"><img src="../img/defipulse-logo.svg" alt="Defi Pulse" class="rights__social__list__item__svg"></a>
           </li>
         </ul>
       </div>

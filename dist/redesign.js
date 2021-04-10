@@ -290,7 +290,24 @@ var loanCount = 0;
 
 $(document).ready(function(){
 
-// const pricesWs = new WebSocket('wss://ws.coincap.io/prices?assets=bitcoin,ethereum,tether,ampleforth,dai,yearn')
+
+// accordions
+var allPanels = $('.faqs__list > dd');
+
+$('.faqs__list > dt > a').click(function() {
+  var thisPanel = $(this).parent().next();
+
+  if( thisPanel.is(':not(:hidden)') ){
+    allPanels.slideUp(300).removeClass('visible');
+    $(this).removeClass('open');
+  } else {
+    allPanels.slideUp(300).removeClass('visible');
+    $('.faqs__list > dt > a').removeClass('open')
+    $(this).addClass('open');
+    $(this).parent().next().slideDown(300).addClass('visible');
+  }
+  return false;
+});
 
 // scrollTrigger
 $('a[href="#roadmap"]').click(function(e){
