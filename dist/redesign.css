@@ -1025,7 +1025,8 @@ main .faqs {
       main .faqs__list__question h3 {
         color: #fff;
         font-size: 1.25rem;
-        font-weight: 500; }
+        font-weight: 500;
+        text-align: left; }
       main .faqs__list__question__plus {
         position: relative;
         display: inline-block;
