@@ -964,7 +964,7 @@ main .roadmap {
   main .roadmap picture {
     max-width: 100%; }
   main .roadmap img {
-    width: 300px;
+    width: 250px;
     max-width: 100%; }
     @media screen and (min-width: 767px) {
       main .roadmap img {
@@ -1030,8 +1030,8 @@ main .faqs {
       main .faqs__list__question__plus {
         position: relative;
         display: inline-block;
-        width: 1rem;
-        height: 1rem;
+        width: 0.75rem;
+        height: 0.75rem;
         margin-right: 0.75rem; }
         main .faqs__list__question__plus .line:first-child,
         main .faqs__list__question__plus .line:last-child {
