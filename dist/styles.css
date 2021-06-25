@@ -10,11 +10,11 @@
 /* End Mixins */
 html, body {
   background: #0f0f0f;
-  background: -webkit-gradient(linear, left bottom, left top, from(#0a0a0a), to(#141414));
-  background: -webkit-linear-gradient(bottom, #0a0a0a 0%, #141414 100%);
-  background: -moz-linear-gradient(bottom, #0a0a0a 0%, #141414 100%);
-  background: -o-linear-gradient(bottom, #0a0a0a 0%, #141414 100%);
-  background: linear-gradient(0deg, #0a0a0a 0%, #141414 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#0f0f0f), to(#181818));
+  background: -webkit-linear-gradient(bottom, #0f0f0f 0%, #181818 100%);
+  background: -moz-linear-gradient(bottom, #0f0f0f 0%, #181818 100%);
+  background: -o-linear-gradient(bottom, #0f0f0f 0%, #181818 100%);
+  background: linear-gradient(0deg, #0f0f0f 0%, #181818 100%);
   font-size: 12px; }
   @media screen and (max-width: 576px) {
     html, body {
@@ -32,14 +32,14 @@ body {
   top: 25vh;
   left: 0;
   width: 100%;
-  height: 50vh;
+  height: 30vh;
   z-index: 0; }
   .glow .circle {
     width: 100%;
     height: 100%;
-    background: #efbc86;
-    -webkit-filter: blur(10rem) opacity(0.1);
-            filter: blur(10rem) opacity(0.1); }
+    background: #fff;
+    -webkit-filter: blur(10rem) opacity(0.05);
+            filter: blur(10rem) opacity(0.05); }
 
 main {
   overflow: hidden;
@@ -114,16 +114,19 @@ section {
   -webkit-border-radius: 2rem;
      -moz-border-radius: 2rem;
           border-radius: 2rem;
-  -webkit-box-shadow: 0.5rem 0.5rem 1.25rem rgba(0, 0, 0, 0.35), -0.5rem -0.5rem 1.25rem rgba(255, 255, 255, 0.05);
-     -moz-box-shadow: 0.5rem 0.5rem 1.25rem rgba(0, 0, 0, 0.35), -0.5rem -0.5rem 1.25rem rgba(255, 255, 255, 0.05);
-          box-shadow: 0.5rem 0.5rem 1.25rem rgba(0, 0, 0, 0.35), -0.5rem -0.5rem 1.25rem rgba(255, 255, 255, 0.05); }
+  -webkit-box-shadow: 0.5rem 0.5rem 1.25rem rgba(0, 0, 0, 0.5), -0.5rem -0.5rem 1.25rem rgba(255, 255, 255, 0.05);
+     -moz-box-shadow: 0.5rem 0.5rem 1.25rem rgba(0, 0, 0, 0.5), -0.5rem -0.5rem 1.25rem rgba(255, 255, 255, 0.05);
+          box-shadow: 0.5rem 0.5rem 1.25rem rgba(0, 0, 0, 0.5), -0.5rem -0.5rem 1.25rem rgba(255, 255, 255, 0.05); }
   .fieldset-wrapper h2 {
     margin: 0 0 0 0;
     grid-column: span 3;
     font-weight: 600;
     font-size: 1.5rem;
     color: #efbc86;
-    background: rgba(255, 255, 255, 0.03);
+    background: -webkit-linear-gradient(305deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1));
+    background: -moz-linear-gradient(305deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1));
+    background: -o-linear-gradient(305deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1));
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1));
     padding: 1rem;
     -webkit-border-radius: 0;
        -moz-border-radius: 0;
@@ -214,9 +217,9 @@ section {
           background: -o-linear-gradient(305deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1));
           background: linear-gradient(145deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1));
           border-radius: 1rem;
-          -webkit-box-shadow: 0.25rem 0.25rem 0.625rem rgba(0, 0, 0, 0.35), -0.25rem -0.25rem 0.625rem rgba(255, 255, 255, 0.05);
-             -moz-box-shadow: 0.25rem 0.25rem 0.625rem rgba(0, 0, 0, 0.35), -0.25rem -0.25rem 0.625rem rgba(255, 255, 255, 0.05);
-                  box-shadow: 0.25rem 0.25rem 0.625rem rgba(0, 0, 0, 0.35), -0.25rem -0.25rem 0.625rem rgba(255, 255, 255, 0.05); }
+          -webkit-box-shadow: 0.25rem 0.25rem 0.625rem rgba(0, 0, 0, 0.5), -0.25rem -0.25rem 0.625rem rgba(255, 255, 255, 0.05);
+             -moz-box-shadow: 0.25rem 0.25rem 0.625rem rgba(0, 0, 0, 0.5), -0.25rem -0.25rem 0.625rem rgba(255, 255, 255, 0.05);
+                  box-shadow: 0.25rem 0.25rem 0.625rem rgba(0, 0, 0, 0.5), -0.25rem -0.25rem 0.625rem rgba(255, 255, 255, 0.05); }
         .fieldset-wrapper fieldset .input-group-parent .input-group [id*="flat-slider"] {
           width: -webkit-calc(100% - 120px);
           width: -moz-calc(100% - 120px);
@@ -262,16 +265,19 @@ section {
   -webkit-border-radius: 2rem;
      -moz-border-radius: 2rem;
           border-radius: 2rem;
-  -webkit-box-shadow: 0.5rem 0.5rem 1.25rem rgba(0, 0, 0, 0.35), -0.5rem -0.5rem 1.25rem rgba(255, 255, 255, 0.05);
-     -moz-box-shadow: 0.5rem 0.5rem 1.25rem rgba(0, 0, 0, 0.35), -0.5rem -0.5rem 1.25rem rgba(255, 255, 255, 0.05);
-          box-shadow: 0.5rem 0.5rem 1.25rem rgba(0, 0, 0, 0.35), -0.5rem -0.5rem 1.25rem rgba(255, 255, 255, 0.05); }
+  -webkit-box-shadow: 0.5rem 0.5rem 1.25rem rgba(0, 0, 0, 0.5), -0.5rem -0.5rem 1.25rem rgba(255, 255, 255, 0.05);
+     -moz-box-shadow: 0.5rem 0.5rem 1.25rem rgba(0, 0, 0, 0.5), -0.5rem -0.5rem 1.25rem rgba(255, 255, 255, 0.05);
+          box-shadow: 0.5rem 0.5rem 1.25rem rgba(0, 0, 0, 0.5), -0.5rem -0.5rem 1.25rem rgba(255, 255, 255, 0.05); }
   .loan-numbers h2 {
     margin: 0 0 0 0;
     grid-column: span 3;
     font-weight: 600;
     font-size: 1.5rem;
     color: #efbc86;
-    background: rgba(255, 255, 255, 0.03);
+    background: -webkit-linear-gradient(305deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1));
+    background: -moz-linear-gradient(305deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1));
+    background: -o-linear-gradient(305deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1));
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1));
     padding: 1rem;
     -webkit-border-radius: 0;
        -moz-border-radius: 0;
@@ -320,9 +326,9 @@ section {
       -webkit-border-radius: 1.5rem;
          -moz-border-radius: 1.5rem;
               border-radius: 1.5rem;
-      -webkit-box-shadow: 0.375rem 0.375rem 0.9375rem rgba(0, 0, 0, 0.35), -0.375rem -0.375rem 0.9375rem rgba(255, 255, 255, 0.05);
-         -moz-box-shadow: 0.375rem 0.375rem 0.9375rem rgba(0, 0, 0, 0.35), -0.375rem -0.375rem 0.9375rem rgba(255, 255, 255, 0.05);
-              box-shadow: 0.375rem 0.375rem 0.9375rem rgba(0, 0, 0, 0.35), -0.375rem -0.375rem 0.9375rem rgba(255, 255, 255, 0.05); }
+      -webkit-box-shadow: 0.375rem 0.375rem 0.9375rem rgba(0, 0, 0, 0.5), -0.375rem -0.375rem 0.9375rem rgba(255, 255, 255, 0.05);
+         -moz-box-shadow: 0.375rem 0.375rem 0.9375rem rgba(0, 0, 0, 0.5), -0.375rem -0.375rem 0.9375rem rgba(255, 255, 255, 0.05);
+              box-shadow: 0.375rem 0.375rem 0.9375rem rgba(0, 0, 0, 0.5), -0.375rem -0.375rem 0.9375rem rgba(255, 255, 255, 0.05); }
       .loan-numbers .outputs p:hover, .loan-numbers .outputs p:focus {
         color: #f0c291;
         text-shadow: 0 0 5px rgba(245, 213, 179, 0.5); }
